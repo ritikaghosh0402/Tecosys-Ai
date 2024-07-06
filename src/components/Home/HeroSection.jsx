@@ -2,8 +2,9 @@ import { motion } from "framer-motion"
 import ActiveButton from "../common/ActiveButton"
 import { FaArrowRight } from "react-icons/fa6"
 import RobotAnimation from "./RobotAnimation"
-import {Features} from "./Features"
+import { Features } from "./Features"
 import '../../App.css'
+import { Link } from "react-router-dom"
 
 function HeroSection() {
     return (
@@ -33,20 +34,22 @@ function HeroSection() {
                             Tecosys is the hub of the next generation of AI models. We are building the next generation of AI models utilizing neuromorphic computing, quantum machine learning, transformers, diffusion, and GAN technologies. Let&#39;s explore our services and read the whitepaper.
                         </motion.div>
                         <div>
-                            <ActiveButton key={1} text={'Read Whitepaper'} customClasses="text-white" className="flex items-center" >
-                                <FaArrowRight />
-                            </ActiveButton>
+                            <Link to="/about">
+                                <ActiveButton key={1} text={'Read Whitepaper'} customClasses="" className="flex items-center" >
+                                    <FaArrowRight />
+                                </ActiveButton>
+                            </Link>
                         </div>
 
                     </div>
                     <div className="w-3/5  border">
-                        <RobotAnimation/>
+                        <RobotAnimation />
                     </div>
                 </div>
             </div>
 
             <div>
-            <Features/>
+                <Features />
             </div>
         </div>
     )
