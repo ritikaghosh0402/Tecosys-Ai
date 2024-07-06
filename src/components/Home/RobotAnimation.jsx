@@ -3,7 +3,7 @@ import RobotImage from '../../../public/robot_image.png'; // Adjust the path to 
 const RobotAnimation = () => {
   return (
     <>
-    <image src={RobotImage} alt="robot" className='text-white bg-white' />
+    {/* <image src={RobotImage} alt="robot" className='text-white bg-white' /> */}
     </>
   );
 }

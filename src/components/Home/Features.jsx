@@ -1,29 +1,32 @@
 
 import { ContainerScroll } from "../../components/ui/container-scroll-animation";
+import { ThreeDCard } from "../common/ThreeDCard";
+import { FeaturesData } from '../../data/Constant'
 
 export function Features() {
   return (
-    <div className="flex flex-col overflow-hidden">
+    <div className="flex flex-col overflow-hidden w-full">
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-4xl font-semibold text-black dark:text-white">
-              Unleash the power of <br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                Scroll Animations
+            <h1 className="text-xl font-semibold text-richblack-25  mx-auto">
+            <p className="w-8/12 mx-auto">
+            Discover how our advanced AI technologies are revolutionizing communication and efficiency.
+            </p>
+              <span className="text-4xl md:text-[4rem] font-bold mt-1 leading-none">
+              Unparalleled Features 
+              {/* for Enhanced Interaction */}
               </span>
             </h1>
           </>
         }
+        className="w-full bg-white border-yellow-200"
       >
-        <image
-          src={`/logo-tecosys.png`}
-          alt="hero"
-          height={720}
-          width={1400}
-          className="mx-auto rounded-2xl object-cover h-full object-left-top"
-          draggable={false}
-        />
+        <div className="bg-transparent justify-center grid grid-cols-3 ">
+          {FeaturesData.map((feature, index) =>
+            <ThreeDCard key={index} title={feature.title} description={feature.description} />
+          )}
+        </div>
       </ContainerScroll>
     </div>
   );
