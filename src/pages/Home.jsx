@@ -2,7 +2,8 @@ import HeroSection from "../components/Home/HeroSection";
 import Ecosystem from "../components/Ecosystem";
 import GeminiSection from "../components/GeminiSection";
 import Features from "../components/Home/Features";
-import {Vortex} from "../components/ui/vortex";
+// import {Vortex} from "../components/ui/vortex";
+
 function Home() {
   return (
     <div className="text-richblack-5">
@@ -12,6 +13,7 @@ function Home() {
       <Features />
       <Ecosystem />
       <GeminiSection />
+  
     </div>
   );
 }
