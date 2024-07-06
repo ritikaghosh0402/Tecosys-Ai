@@ -2,10 +2,7 @@ import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "../../utils/cn";
 
-export const TextGenerateEffect = ({
-  words,
-  className,
-}) => {
+export const TextGenerateEffect = ({ words, className }) => {
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
   useEffect(() => {
