@@ -1,5 +1,5 @@
 import { cn } from "../../utils/cn";
-import React, {
+import {
   createContext,
   useState,
   useContext,
@@ -40,7 +40,7 @@ export const CardContainer = ({
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
         className={cn(
-          "py-20 flex items-center justify-center",
+          "py-16 flex items-center justify-center",
           containerClassName
         )}
         style={{

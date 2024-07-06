@@ -3,7 +3,7 @@ import { ContainerScroll } from "../../components/ui/container-scroll-animation"
 import { ThreeDCard } from "../common/ThreeDCard";
 import { FeaturesData } from '../../data/Constant'
 
-export function Features() {
+export default function Features() {
   return (
     <div className="flex flex-col overflow-hidden w-full">
       <ContainerScroll

@@ -2,9 +2,7 @@ import { motion } from "framer-motion"
 import ActiveButton from "../common/ActiveButton"
 import { FaArrowRight } from "react-icons/fa6"
 import RobotAnimation from "./RobotAnimation"
-import { Features } from "./Features"
 import '../../App.css'
-import { Link } from "react-router-dom"
 
 function HeroSection() {
     return (
@@ -46,10 +44,6 @@ function HeroSection() {
                         <RobotAnimation />
                     </div>
                 </div>
-            </div>
-
-            <div>
-                <Features />
             </div>
         </div>
     )
