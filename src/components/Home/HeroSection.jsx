@@ -3,6 +3,8 @@ import { FaArrowRight } from "react-icons/fa6";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import { words } from "../../data/Constant";
 import "../../App.css";
+import Lottie from "lottie-react";
+import animationData from "../../data/RobortAnimation.json";
 
 function HeroSection() {
   return (
@@ -16,10 +18,16 @@ function HeroSection() {
         </div>
 
         <div className="w-full flex items-center flex-col mt-10  content-container ">
-          <img
+          {/* <img
             src="hero-img-2.png"
             alt="Hero image"
             className="h-[50vh] pb-4 mb-4"
+          /> */}
+
+          <Lottie
+            animationData={animationData}
+            loop={true}
+            className="h-[70vh] pb-4 mb-4"
           />
 
           <div>
