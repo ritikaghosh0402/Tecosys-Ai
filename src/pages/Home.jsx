@@ -29,10 +29,9 @@ function Home() {
               Tecosys is the hub of the next generation of AI models. We are building the next generation of AI models utilizing neuromorphic computing, quantum machine learning, transformers, diffusion, and GAN technologies. Let&#39;s explore our services and read the whitepaper.
             </motion.div>
             <div>
-              {HeroButton.map((button, index) => (
-                <ActiveButton key={index} text={button.text} customClasses="bg-blue-500 text-white" />
-              ))
-              }
+              
+                <ActiveButton key={1} text={'Read Whitepaper'} customClasses="text-white" />
+      
             </div>
             <div>
               {/* button */}
