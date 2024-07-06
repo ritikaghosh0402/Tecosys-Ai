@@ -25,13 +25,15 @@ function HeroSection() {
             className="h-[50vh] pb-4 mb-4"
           /> */}
 
-          <Lottie
-            animationData={animationData}
-            loop={true}
-            className="h-[70vh] pb-4 mb-4"
-          />
-
           <div>
+            <Lottie
+              animationData={animationData}
+              loop={true}
+              className="h-[70vh] pb-4 mb-4"
+            />
+          </div>
+
+          <div className="relative z-10">
             <a href="/Tecosys.pdf" target="_blank">
               <ActiveButton
                 key={1}
