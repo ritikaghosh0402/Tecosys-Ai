@@ -1,7 +1,6 @@
 import { motion } from "framer-motion"
 import ActiveButton from "../common/ActiveButton"
 import { FaArrowRight } from "react-icons/fa6"
-import RobotAnimation from "./RobotAnimation"
 import { TextGenerateEffect } from "../ui/text-generate-effect"
 import { words } from "../../data/Constant"
 import '../../App.css'
@@ -35,7 +34,6 @@ function HeroSection() {
 
                     </div>
                     <div className="w-3/5  border">
-                        <RobotAnimation />
                     </div>
                 </div>
             </div>
