@@ -31,7 +31,7 @@ function HeroSection() {
             <a href="/Tecosys.pdf" target="">
               <ActiveButton
                 text={"Read Whitepaper"}
-                customClasses="bg-[#5a10c4] text-white"
+                customClasses="bg-[#5a10c4] hover:scale-90 transition-all duration-300 shadow-sm shadow-white"
                 className="flex items-center cursor-pointer"
                 >
                 <FaArrowRight />
