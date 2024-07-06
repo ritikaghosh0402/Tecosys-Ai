@@ -1,13 +1,15 @@
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/common/Navbar";
 import Home from "./pages/Home";
 import LocomotiveScroll from "locomotive-scroll";
+import StarBackground from "./components/ui/StarBackground";
 
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
   return (
     <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter border">
       <Navbar />
+      <StarBackground />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
