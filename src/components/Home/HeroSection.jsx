@@ -8,7 +8,7 @@ import animationData from "../../data/RobortAnimation.json";
 import { useNavigate } from "react-router-dom";
 
 function HeroSection() {
-    const navigate=useNavigate();
+  const navigate = useNavigate();
   return (
     <div>
       <div className="w-10/12 mt-2 mx-auto ">
@@ -20,7 +20,6 @@ function HeroSection() {
         </div>
 
         <div className="w-full flex items-center flex-col mt-10  content-container ">
-            
           <Lottie
             animationData={animationData}
             loop={true}
@@ -28,12 +27,12 @@ function HeroSection() {
           />
 
           <div className="relative z-10">
-            <a href="/Tecosys.pdf" target="">
+            <a href="/Tecosys.pdf" target="_blank">
               <ActiveButton
                 text={"Read Whitepaper"}
                 customClasses="bg-[#5a10c4] hover:scale-90 transition-all duration-300 shadow-sm shadow-white"
                 className="flex items-center cursor-pointer"
-                >
+              >
                 <FaArrowRight />
               </ActiveButton>
             </a>
