@@ -1,0 +1,427 @@
+import { useEffect, useState } from "react";
+import EcosystemCard from "./EcosystemCard";
+import { isMobile } from "react-device-detect";
+import addfile from "/ecosystem_icons/addfile.png";
+import img from "/ecosystem_icons/img.png";
+import light from "/ecosystem_icons/light.png";
+import present from "/ecosystem_icons/present.png";
+import shop from "/ecosystem_icons/shop.png";
+import tool from "/ecosystem_icons/tool.png";
+import tv from "/ecosystem_icons/tv.png";
+
+import vedio from "/ecosystem_icons/vedio.png";
+
+const Ecosystem = () => {
+  const [rotation, setRotation] = useState(0);
+  const [isHoveredOrClicked, setIsHoveredOrClicked] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isHoveredOrClicked) {
+        setRotation((rotation) => rotation + 1); // Increase rotation angle gradually
+      }
+    }, 50); // Adjust the rotation speed as needed
+
+    return () => clearInterval(interval);
+  }, [isHoveredOrClicked]);
+
+  const centerText = [
+    {
+      title: "Ecosystem",
+      text: "Content Writing Tools",
+    },
+    {
+      title: "Ecosystem",
+      text: "Image/Logo/Poster",
+    },
+    {
+      title: "Ecosystem",
+      text: "Design/Development Tools",
+    },
+    {
+      title: "Ecosystem",
+      text: "Website & Presentation Builder",
+    },
+    {
+      title: "Ecosystem",
+      text: "Business/Marketing Tools",
+    },
+    {
+      title: "Ecosystem",
+      text: "Creators Marketplace",
+    },
+    {
+      title: "Ecosystem",
+      text: "Multimedia Bot Builder",
+    },
+    {
+      title: "Ecosystem",
+      text: "Audio, Videos & Animation",
+    },
+  ];
+
+  const [hoveredTxt, setHoveredTxt] = useState(0);
+
+  return (
+    <div
+      id="smooth-content"
+      className="flex flex-col items-center justify-center w-full gap-4 third-section relative mt-[10vh]"
+    >
+      {/* ************ Heading & Sub-Heading ************  */}
+
+      {!isMobile ? (
+        <div className="relative w-[60em] h-[60em] mx-auto">
+          {/* Larger circular border around the "Ecosystem" section */}
+          <div className="relative w-full h-full">
+            {/* Background image */}
+            <img
+              src="ecosystem-ellipse.png"
+              alt="Ecosystem background"
+              className="absolute inset-0 object-cover w-full h-full rounded-full"
+              style={{ width: "80%", height: "80%", top: "10%", left: "10%" }}
+            />
+            {/* Outer image placed on the outer circle */}
+            <img
+              src="outer-ecosystem-ellipse.png"
+              alt="Outer Ecosystem background"
+              className="absolute inset-0 object-cover w-full h-full rounded-full ecosystem"
+              style={{ width: "60%", height: "60%", top: "20%", left: "20%" }}
+            />
+            {/* Sprinkles image placed outside the inner circle but inside the outer circle */}
+            <img
+              src="sprinkles-ecosystem-ellipse.png"
+              alt="Sprinkles Ecosystem background"
+              className="absolute inset-0 object-cover w-full h-full rounded-full"
+              style={{ width: "100%", height: "100%", opacity: 0.2 }}
+            />
+            {/* Content centered within the circle */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+              <h1 className="text-5xl font-medium text-white md:text-10xl">
+                {centerText[hoveredTxt].title}
+              </h1>
+              <p className="mt-3 text-gray-400 text-md">
+                {centerText[hoveredTxt].text}
+              </p>
+            </div>
+          </div>
+          {/* Ecosystem cards positioned around the larger circle */}
+          <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
+            {/* <EcosystemCard
+                setAngle={[0,30]} rotation={rotation} /> components distributed evenly around the larger circle */}
+            <div
+              className="absolute w-96 h-96"
+              style={{ transform: `rotate(${rotation-35}deg)` }}
+            >
+              {/* Spacing the cards evenly */}
+              <div
+                className="absolute -top-[110px] left-[135px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: `translate(-50%, -50%)` }}
+              >
+                <EcosystemCard
+                setAngle={[0,45]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={0}
+                  imgsrc={addfile}
+                  hoveredTxt={centerText[0].text}
+                />
+              </div>
+              <div
+                className="absolute -top-[25px] -left-[80px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: `translate(-50%, -50%)` }}
+              >
+                <EcosystemCard
+                setAngle={[45,90]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={1}
+                  imgsrc={img}
+                  hoveredTxt={centerText[1].text}
+                />
+              </div>
+              <div
+                className="absolute top-1/2 -left-[185px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: `translate(-50%, -50%)` }}
+              >
+                <EcosystemCard
+                setAngle={[90,135]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={2}
+                  imgsrc={light}
+                  hoveredTxt={centerText[2].text}
+                />
+              </div>
+              <div
+                className="absolute -bottom-[90px] -left-[90px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: `translate(-50%, -50%)` }}
+              >
+                <EcosystemCard
+                setAngle={[135,180]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={3}
+                  imgsrc={present}
+                  hoveredTxt={centerText[3].text}
+                />
+              </div>
+              <div
+                className="absolute -bottom-[190px] left-[145px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: `translate(-50%, -50%)` }}
+              >
+                <EcosystemCard
+                setAngle={[180,225]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={4}
+                  imgsrc={shop}
+                  hoveredTxt={centerText[4].text}
+                />
+              </div>
+              <div
+                className="absolute -bottom-[90px] -right-[40px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: `translate(-50%, -50%)` }}
+              >
+                <EcosystemCard
+                setAngle={[225,270]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={5}
+                  imgsrc={tool}
+                  hoveredTxt={centerText[5].text}
+                />
+              </div>
+              <div
+                className="absolute top-1/2 -right-[120px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: `translate(-50%, -50%)` }}
+              >
+                <EcosystemCard
+                setAngle={[270,315]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={6}
+                  imgsrc={tv}
+                  hoveredTxt={centerText[6].text}
+                />
+              </div>
+              <div
+                className="absolute -top-[25px] -right-[35px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: `translate(-50%, -50%)` }}
+              >
+                <EcosystemCard
+                setAngle={[315,360]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={7}
+                  imgsrc={vedio}
+                  hoveredTxt={centerText[7].text}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="relative w-full h-[35em] mx-auto">
+          {/* Larger circular border around the "Ecosystem" section */}
+          <div className="relative flex items-center justify-center w-full h-full">
+            {/* Background image */}
+            <img
+              src="ecosystem-ellipse.png"
+              alt="Ecosystem background"
+              className="absolute object-contain w-full h-full rounded-full"
+              // style={{ width: "70%", height: "100%"}}
+            />
+            {/* Outer image placed on the outer circle */}
+            <img
+              src="outer-ecosystem-ellipse.png"
+              alt="Outer Ecosystem background"
+              className="absolute inset-0 object-contain w-full h-full rounded-full"
+              style={{ width: "70%", height: "100%", left: "15%" }}
+            />
+            {/* Sprinkles image placed outside the inner circle but inside the outer circle */}
+            <img
+              src="sprinkles-ecosystem-ellipse.png"
+              alt="Sprinkles Ecosystem background"
+              className="absolute inset-0 object-contain w-full h-full rounded-full"
+              // style={{ width: "70%", height: "100%", left: "15%", opacity: 0.2}}
+            />
+            {/* Content centered within the circle */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+              <h1 className="text-xl font-bold text-white md:text-10xl">
+                {centerText[hoveredTxt].title}
+              </h1>
+              <p className="mt-3 text-sm text-gray-400">
+                {centerText[hoveredTxt].text}
+              </p>
+            </div>
+          </div>
+          {/* Ecosystem cards positioned around the larger circle */}
+          <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
+            {/* <EcosystemCard
+                setAngle={[0,30]} rotation={rotation} /> components distributed evenly around the larger circle */}
+            <div
+              className="absolute w-80 h-80"
+              style={{ transform: `rotate(${rotation}deg)` }}
+            >
+              {/* Spacing the cards evenly */}
+              <div
+                className="absolute top-[5px] left-1/2 w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: "translate(-50%, -40%)" }}
+              >
+                <EcosystemCard
+                setAngle={[0,45]}
+                rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={0}
+                  imgsrc={addfile}
+                  hoveredTxt={centerText[0].text}
+                />
+              </div>
+              <div
+                className="absolute top-[60px] left-[50px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: "translate(-50%, -50%)" }}
+              >
+                <EcosystemCard
+                setAngle={[45,90]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={1}
+                  imgsrc={img}
+                  hoveredTxt={centerText[1].text}
+                />
+              </div>
+              <div
+                className="absolute top-[60px] -right-[10px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: "translate(-50%, -50%)" }}
+              >
+                <EcosystemCard
+                setAngle={[90,135]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={2}
+                  imgsrc={light}
+                  hoveredTxt={centerText[2].text}
+                />
+              </div>
+              <div
+                className="absolute bottom-[95px] left-[10px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: "translate(-50%, -50%)" }}
+              >
+                <EcosystemCard
+                setAngle={[135,180]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={3}
+                  imgsrc={present}
+                  hoveredTxt={centerText[3].text}
+                />
+              </div>
+              <div
+                className="absolute -bottom-[65px] left-1/2 w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: "translate(-50%, -70%)" }}
+              >
+                <EcosystemCard
+                setAngle={[180,225]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={4}
+                  imgsrc={shop}
+                  hoveredTxt={centerText[4].text}
+                />
+              </div>
+              <div
+                className="absolute bottom-[95px] -right-[50px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: "translate(-50%, -50%)" }}
+              >
+                <EcosystemCard
+                setAngle={[225,270]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={5}
+                  imgsrc={tool}
+                  hoveredTxt={centerText[5].text}
+                />
+              </div>
+              <div
+                className="absolute -bottom-[0px] -right-[10px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: "translate(-50%, -50%)" }}
+              >
+                <EcosystemCard
+                setAngle={[270,315]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={6}
+                  imgsrc={tv}
+                  hoveredTxt={centerText[6].text}
+                />
+              </div>
+              <div
+                className="absolute -bottom-[10px] left-[50px] w-16 h-16 rounded-full flex items-center justify-center"
+                onMouseEnter={() => setIsHoveredOrClicked(true)}
+                onMouseLeave={() => setIsHoveredOrClicked(false)}
+                onClick={() => setIsHoveredOrClicked(true)}
+                style={{ transform: "translate(-50%, -50%)" }}
+              >
+                <EcosystemCard
+                setAngle={[315,360]}
+                  rotation={rotation}
+                  setHoveredTxt={setHoveredTxt}
+                  index={7}
+                  imgsrc={vedio}
+                  hoveredTxt={centerText[7].text}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Ecosystem;
