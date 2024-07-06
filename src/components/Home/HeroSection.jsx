@@ -34,11 +34,11 @@ function HeroSection() {
                             Tecosys is the hub of the next generation of AI models. We are building the next generation of AI models utilizing neuromorphic computing, quantum machine learning, transformers, diffusion, and GAN technologies. Let&#39;s explore our services and read the whitepaper.
                         </motion.div>
                         <div>
-                            <Link to="/about">
+                            <a href="/Tecosys.pdf" target="_blank">
                                 <ActiveButton key={1} text={'Read Whitepaper'} customClasses="" className="flex items-center" >
                                     <FaArrowRight />
                                 </ActiveButton>
-                            </Link>
+                            </a>
                         </div>
 
                     </div>
