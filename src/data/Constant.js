@@ -116,3 +116,5 @@ export const FeaturesData = [
         description: 'Pioneering AI solutions, enhancing healthcare with intelligent diagnostics, and driving groundbreaking research for innovative discoveries.'
     },
 ]
+
+export const words = `Explore the Next Generation AI Models with Tecosys`

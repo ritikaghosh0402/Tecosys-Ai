@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export function ThreeDCard({title, description}) {
     return (
-        <CardContainer className="inter-var bg-[#5D22B2] rounded-xl">
+        <CardContainer className="inter-var  rounded-xl">
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-80 border h-48 border-white  rounded-xl p-5  ">
                         <div>
                             <CardItem

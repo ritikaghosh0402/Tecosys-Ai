@@ -2,6 +2,8 @@ import { motion } from "framer-motion"
 import ActiveButton from "../common/ActiveButton"
 import { FaArrowRight } from "react-icons/fa6"
 import RobotAnimation from "./RobotAnimation"
+import { TextGenerateEffect } from "../ui/text-generate-effect"
+import { words } from "../../data/Constant"
 import '../../App.css'
 
 function HeroSection() {
@@ -10,15 +12,7 @@ function HeroSection() {
             <div className="w-10/12 mt-2 mx-auto ">
 
                 <div>
-                    <motion.div
-                        initial={{ x: 1200 }}
-                        animate={{ x: [1200, 0] }}
-                        transition={{ duration: 2, delay: 0.2 }}
-                        whileHover={{ scale: 0.9, opacity: 0.8 }}
-                        className="w-[80%] mx-auto text-center text-richblack-25 text-6xl leading-tight"
-                    >
-                        Explore the Next Generation AI Models with Tecosys
-                    </motion.div>
+                    <TextGenerateEffect words={words} className="w-[80%] mx-auto text-center text-richblack-25 text-6xl leading-tight " />
                 </div>
 
                 <div className="w-full flex mt-10  content-container ">
