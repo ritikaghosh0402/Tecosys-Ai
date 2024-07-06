@@ -9,12 +9,11 @@ function Home() {
     <div className="text-richblack-5">
       {/* <StarBackground className="" /> */}
       {/* <Vortex> */}
-        <HeroSection />
+      <HeroSection />
       {/* </Vortex> */}
       <Features />
       <Ecosystem />
       <GeminiSection />
-  
     </div>
   );
 }
