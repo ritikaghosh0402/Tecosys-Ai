@@ -51,9 +51,9 @@ const StarsCanvas = () => (
 const App = () => (
   <div>
     <StarsCanvas />
-    <div className="other-component">
+    {/* <div className="other-component">
       Hover over me
-    </div>
+    </div> */}
   </div>
 );
 
