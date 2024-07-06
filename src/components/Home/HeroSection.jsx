@@ -27,7 +27,7 @@ function HeroSection() {
             className="h-[70vh] pb-4 mb-4 "
           />
 
-          <div>
+          <div className="relative z-10">
             <a href="/Tecosys.pdf" target="">
               <ActiveButton
                 text={"Read Whitepaper"}
