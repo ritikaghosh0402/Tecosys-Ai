@@ -2,8 +2,6 @@
 import { isMobile } from "react-device-detect";
 import { useEffect } from "react";
 
-
-
 const EcosystemCard = ({
   rotation,
   imgsrc,
@@ -12,13 +10,13 @@ const EcosystemCard = ({
   hoveredTxt,
   setAngle,
 }) => {
-//   console.log(rotation, "rotation value");
-//   console.log(setAngle, "setAngle value");
-//   console.log(rotation % 360, "rotation value check");
-//   console.log(
-//     rotation % 360 > setAngle[0] && rotation % 360 < setAngle[1],
-//     "setAngle value check"
-//   );
+  //   console.log(rotation, "rotation value");
+  //   console.log(setAngle, "setAngle value");
+  //   console.log(rotation % 360, "rotation value check");
+  //   console.log(
+  //     rotation % 360 > setAngle[0] && rotation % 360 < setAngle[1],
+  //     "setAngle value check"
+  //   );
 
   useEffect(() => {
     if (rotation % 360 > setAngle[0] && rotation % 360 < setAngle[1]) {
@@ -38,7 +36,7 @@ const EcosystemCard = ({
             style={{
               backgroundColor:
                 rotation % 360 > setAngle[0] && rotation % 360 < setAngle[1]
-                  ? "#5D22B2"
+                  ? "#2D1879"
                   : "#1c1428",
               transform: rotation ? `rotate(-${rotation}deg)` : "rotate(0deg)",
             }}
@@ -75,7 +73,7 @@ const EcosystemCard = ({
             style={{
               backgroundColor:
                 rotation % 360 > setAngle[0] && rotation % 360 < setAngle[1]
-                  ? "#5D22B2"
+                  ? "#2D1879"
                   : "#1c1428",
               padding: "0.5rem",
               transform: rotation ? `rotate(-${rotation}deg)` : "rotate(0deg)",
