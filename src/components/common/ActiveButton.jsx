@@ -1,4 +1,3 @@
-import { Button } from "../ui/moving-border";
 export default function ActiveButton({
   text,
   onClick,
@@ -9,13 +8,13 @@ export default function ActiveButton({
   type,
 }) {
   return (
-    <Button
+    <button
       disabled={disabled}
       onClick={onClick}
       type={type}
       className={`flex items-center border-neutral-200 ${
         outline ? "border border-yellow-50 bg-transparent" : "bg-yellow-50"
-      } cursor-pointer gap-x-2 rounded-md py-2 px-5 font-semibold text-richblack-900 bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 ${customClasses}`}
+      } cursor-pointer gap-x-2 rounded-md py-2 px-5 font-semibold text-richblack-900  ${customClasses}`}
     >
       {children ? (
         <>
@@ -25,6 +24,6 @@ export default function ActiveButton({
       ) : (
         text
       )}
-    </Button>
+    </button>
   );
 }
