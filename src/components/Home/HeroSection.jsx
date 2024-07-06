@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import ActiveButton from "../common/ActiveButton";
 import { FaArrowRight } from "react-icons/fa6";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
@@ -38,7 +37,7 @@ function HeroSection() {
               <ActiveButton
                 key={1}
                 text={"Read Whitepaper"}
-                customClasses=""
+                customClasses="bg-[#5a10c4] text-white"
                 className="flex items-center"
               >
                 <FaArrowRight />
