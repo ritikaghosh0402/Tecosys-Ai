@@ -3,11 +3,13 @@ import ServicesAnimation from "../components/ServicesAnimation";
 import GeminiSection from "../components/GeminiSection";
 import ParticlesComponent from "../components/common/ParticleBacground";
 import SparklesCore from "../components/ui/sparkles";
+import ContactUs from "../components/Home/ContactUs";
+
 function Home() {
   return (
     <div className="text-richblack-5">
-      
       <ParticlesComponent id="particles"  />
+    
         <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
@@ -20,6 +22,7 @@ function Home() {
       
       <HeroSection />
       <ServicesAnimation/>
+      <ContactUs />
       <GeminiSection />
     </div>
   );

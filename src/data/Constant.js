@@ -7,12 +7,16 @@ export const NavbarLinks = [
         id: 2,
         title: 'About',
         url: '/about'
-    }, {
+    },{
         id: 3,
+        title: 'Contact Us',
+        url: '/contact'
+    }, {
+        id: 4,
         title: 'Services',
         url: '/services'
     }, {
-        id: 4,
+        id: 5,
         title: 'Invest',
         url: '/invest'
     },

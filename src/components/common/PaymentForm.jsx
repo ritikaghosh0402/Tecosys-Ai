@@ -61,13 +61,12 @@ export default function PaymentForm() {
     useEffect(() => {
         if (isSubmitSuccessful) {
             reset({
-                firstname: "",
-                lastname: "",
+                firstName: "",
+                lastName: "",
                 email: "",
                 phoneNo: "",
                 message: "",
                 amount: "",
-                service: prod[0].service,
 
             })
         }
