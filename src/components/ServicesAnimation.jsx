@@ -28,27 +28,27 @@ const ServicesAnimation = () => {
   const centerText = [
     {
       title: "Services",
-      text: "Content Writing Tools",
+      text: "Intelligent AI Chatbot",
     },
     {
       title: "Services",
-      text: "Image/Logo/Poster",
+      text: "AI-based Hospital Management System",
     },
     {
       title: "Services",
-      text: "Design/Development Tools",
+      text: "AI-based Education Management System",
     },
     {
       title: "Services",
-      text: "Website & Presentation Builder",
+      text: "AI-based Event Management System",
     },
     {
       title: "Services",
-      text: "Business/Marketing Tools",
+      text: "AI Researcher",
     },
     {
       title: "Services",
-      text: "Creators Marketplace",
+      text: "AI Doctor",
     },
     {
       title: "Services",
@@ -56,7 +56,7 @@ const ServicesAnimation = () => {
     },
     {
       title: "Services",
-      text: "Audio, Videos & Animation",
+      text: "AI Lawyer",
     },
   ];
 
