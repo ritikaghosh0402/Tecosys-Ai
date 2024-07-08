@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import EcosystemCard from "./EcosystemCard";
+import ServiceCard from "./ServiceCard";
 import { isMobile } from "react-device-detect";
 import addfile from "/ecosystem_icons/addfile.png";
 import img from "/ecosystem_icons/img.png";
@@ -11,7 +11,7 @@ import tv from "/ecosystem_icons/tv.png";
 
 import vedio from "/ecosystem_icons/vedio.png";
 
-const Ecosystem = () => {
+const ServicesAnimation = () => {
   const [rotation, setRotation] = useState(0);
   const [isHoveredOrClicked, setIsHoveredOrClicked] = useState(false);
 
@@ -27,36 +27,36 @@ const Ecosystem = () => {
 
   const centerText = [
     {
-      title: "Ecosystem",
-      text: "Content Writing Tools",
+      title: "Services",
+      text: "Intelligent AI Chatbot",
     },
     {
-      title: "Ecosystem",
-      text: "Image/Logo/Poster",
+      title: "Services",
+      text: "AI-based Hospital Management System",
     },
     {
-      title: "Ecosystem",
-      text: "Design/Development Tools",
+      title: "Services",
+      text: "AI-based Education Management System",
     },
     {
-      title: "Ecosystem",
-      text: "Website & Presentation Builder",
+      title: "Services",
+      text: "AI-based Event Management System",
     },
     {
-      title: "Ecosystem",
-      text: "Business/Marketing Tools",
+      title: "Services",
+      text: "AI Researcher",
     },
     {
-      title: "Ecosystem",
-      text: "Creators Marketplace",
+      title: "Services",
+      text: "AI Doctor",
     },
     {
-      title: "Ecosystem",
+      title: "Services",
       text: "Multimedia Bot Builder",
     },
     {
-      title: "Ecosystem",
-      text: "Audio, Videos & Animation",
+      title: "Services",
+      text: "AI Lawyer",
     },
   ];
 
@@ -106,11 +106,11 @@ const Ecosystem = () => {
           </div>
           {/* Ecosystem cards positioned around the larger circle */}
           <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
-            {/* <EcosystemCard
+            {/* <ServiceCard
                 setAngle={[0,30]} rotation={rotation} /> components distributed evenly around the larger circle */}
             <div
               className="absolute w-96 h-96"
-              style={{ transform: `rotate(${rotation-35}deg)` }}
+              style={{ transform: `rotate(${rotation - 35}deg)` }}
             >
               {/* Spacing the cards evenly */}
               <div
@@ -120,8 +120,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: `translate(-50%, -50%)` }}
               >
-                <EcosystemCard
-                setAngle={[0,45]}
+                <ServiceCard
+                  setAngle={[0, 45]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={0}
@@ -136,8 +136,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: `translate(-50%, -50%)` }}
               >
-                <EcosystemCard
-                setAngle={[45,90]}
+                <ServiceCard
+                  setAngle={[45, 90]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={1}
@@ -152,8 +152,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: `translate(-50%, -50%)` }}
               >
-                <EcosystemCard
-                setAngle={[90,135]}
+                <ServiceCard
+                  setAngle={[90, 135]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={2}
@@ -168,8 +168,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: `translate(-50%, -50%)` }}
               >
-                <EcosystemCard
-                setAngle={[135,180]}
+                <ServiceCard
+                  setAngle={[135, 180]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={3}
@@ -184,8 +184,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: `translate(-50%, -50%)` }}
               >
-                <EcosystemCard
-                setAngle={[180,225]}
+                <ServiceCard
+                  setAngle={[180, 225]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={4}
@@ -200,8 +200,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: `translate(-50%, -50%)` }}
               >
-                <EcosystemCard
-                setAngle={[225,270]}
+                <ServiceCard
+                  setAngle={[225, 270]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={5}
@@ -216,8 +216,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: `translate(-50%, -50%)` }}
               >
-                <EcosystemCard
-                setAngle={[270,315]}
+                <ServiceCard
+                  setAngle={[270, 315]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={6}
@@ -232,8 +232,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: `translate(-50%, -50%)` }}
               >
-                <EcosystemCard
-                setAngle={[315,360]}
+                <ServiceCard
+                  setAngle={[315, 360]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={7}
@@ -281,7 +281,7 @@ const Ecosystem = () => {
           </div>
           {/* Ecosystem cards positioned around the larger circle */}
           <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
-            {/* <EcosystemCard
+            {/* <ServiceCard
                 setAngle={[0,30]} rotation={rotation} /> components distributed evenly around the larger circle */}
             <div
               className="absolute w-80 h-80"
@@ -295,9 +295,9 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: "translate(-50%, -40%)" }}
               >
-                <EcosystemCard
-                setAngle={[0,45]}
-                rotation={rotation}
+                <ServiceCard
+                  setAngle={[0, 45]}
+                  rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={0}
                   imgsrc={addfile}
@@ -311,8 +311,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: "translate(-50%, -50%)" }}
               >
-                <EcosystemCard
-                setAngle={[45,90]}
+                <ServiceCard
+                  setAngle={[45, 90]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={1}
@@ -327,8 +327,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: "translate(-50%, -50%)" }}
               >
-                <EcosystemCard
-                setAngle={[90,135]}
+                <ServiceCard
+                  setAngle={[90, 135]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={2}
@@ -343,8 +343,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: "translate(-50%, -50%)" }}
               >
-                <EcosystemCard
-                setAngle={[135,180]}
+                <ServiceCard
+                  setAngle={[135, 180]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={3}
@@ -359,8 +359,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: "translate(-50%, -70%)" }}
               >
-                <EcosystemCard
-                setAngle={[180,225]}
+                <ServiceCard
+                  setAngle={[180, 225]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={4}
@@ -375,8 +375,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: "translate(-50%, -50%)" }}
               >
-                <EcosystemCard
-                setAngle={[225,270]}
+                <ServiceCard
+                  setAngle={[225, 270]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={5}
@@ -391,8 +391,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: "translate(-50%, -50%)" }}
               >
-                <EcosystemCard
-                setAngle={[270,315]}
+                <ServiceCard
+                  setAngle={[270, 315]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={6}
@@ -407,8 +407,8 @@ const Ecosystem = () => {
                 onClick={() => setIsHoveredOrClicked(true)}
                 style={{ transform: "translate(-50%, -50%)" }}
               >
-                <EcosystemCard
-                setAngle={[315,360]}
+                <ServiceCard
+                  setAngle={[315, 360]}
                   rotation={rotation}
                   setHoveredTxt={setHoveredTxt}
                   index={7}
@@ -424,4 +424,4 @@ const Ecosystem = () => {
   );
 };
 
-export default Ecosystem;
+export default ServicesAnimation;
