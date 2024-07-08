@@ -34,25 +34,25 @@ const prod = [
 
 export default function PaymentForm() {
     const [loading, setLoading] = useState(false);
-    const makePayment = (token) => {
-        const body = {
-            token,
-            service
-        }
+    // const makePayment = (token) => {
+    //     const body = {
+    //         token,
+    //         service
+    //     }
 
-        const headers = {
-            "Content-Type": "application/json"
-        }
-        return fetch(`http://localhost:8080/payment`, {
-            method: 'POST',
-            headers,
-            body: JSON.stringify(body)
-        }).then(response => {
-            console.log(response)
-            const { status } = response
-            console.log('Status', status)
-        }).catch(error => console.log(error))
-    }
+    //     const headers = {
+    //         "Content-Type": "application/json"
+    //     }
+    //     return fetch(`http://localhost:8080/payment`, {
+    //         method: 'POST',
+    //         headers,
+    //         body: JSON.stringify(body)
+    //     }).then(response => {
+    //         console.log(response)
+    //         const { status } = response
+    //         console.log('Status', status)
+    //     }).catch(error => console.log(error))
+    // }
     const {
         register,
         handleSubmit,
@@ -111,7 +111,7 @@ export default function PaymentForm() {
                                 }}
                                 className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
                             />
-                            {errors.firstname && (<span className='sm:absolute -bottom-6 left-0 text-pink-300'>Please enter your first name</span>)}
+                            {errors.firstName && (<span className='sm:absolute -bottom-6 left-0 text-pink-300'>Please enter your first name</span>)}
                         </label>
                     </div>
 
@@ -128,7 +128,7 @@ export default function PaymentForm() {
                                 }}
                                 className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
                             />
-                            {errors.lastname && (<span className='sm:absolute -bottom-6 left-0 text-pink-300'>Please enter your last name</span>)}
+                            {errors.lastName && (<span className='sm:absolute -bottom-6 left-0 text-pink-300'>Please enter your last name</span>)}
                         </label>
                     </div>
                 </div>
@@ -267,13 +267,15 @@ export default function PaymentForm() {
                             cols="30"
                             rows="5"
                             placeholder='Enter your message here'
-                            {...register("message", { required: true })}
+                            {...register("message", 
+                                // { required: true }
+                            )}
                             style={{
                                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
                             }}
                             className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
                         />
-                        {errors.message && (<span className='sm:absolute -bottom-6 left-0 text-pink-300'>Please enter your message.</span>)}
+                        {/* {errors.message && (<span className='sm:absolute -bottom-6 left-0 text-pink-300'>Please enter your message.</span>)} */}
                     </label>
                 </div>
 
@@ -281,6 +283,7 @@ export default function PaymentForm() {
                     disabled={loading}>
                     Pay Now
                 </button>
+                {/*
                 <StripeCheckout
                     stripeKey='key'
                     token={makePayment}
@@ -292,6 +295,8 @@ export default function PaymentForm() {
                         Pay with Stripe
                     </button>
                 </StripeCheckout>
+                */}
+
             </div>
         </form>
     )
