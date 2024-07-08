@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import ActiveButton from "../common/ActiveButton";
 import { FaArrowRight } from "react-icons/fa6";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
@@ -7,6 +8,7 @@ import Lottie from "lottie-react";
 import animationData from "../../data/RobortAnimation.json";
 import { Link, useNavigate } from "react-router-dom";
 import HoverButton from "../common/hoverButton";
+import { GiPayMoney } from "react-icons/gi";
 
 function HeroSection() {
   const navigate = useNavigate();
@@ -44,7 +46,9 @@ function HeroSection() {
             </a>
             <div>
             <Link to="/invest">
-              <HoverButton text={"Invest Now"} />
+              <HoverButton text={"Invest Now"} >
+              <GiPayMoney />
+              </HoverButton>
             </Link>
             </div>
           </div>

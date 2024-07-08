@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import logo from '/logo-tecosys.png'
 import { Link, matchPath } from 'react-router-dom'
 import { IoIosArrowDropdown } from "react-icons/io";
