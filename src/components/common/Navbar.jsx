@@ -21,47 +21,17 @@ function Navbar() {
                     <ul className={`flex  gap-4 md:gap-5 text-richblack-25 `}>
                         {NavbarLinks.map((link, index) => (
                             <li key={index}>
-                                {link.title === "Others" ? (
-                                    <div
-                                        className={`group relative flex cursor-pointer items-center gap-1 hover:text-[#5D22B2] ${matchRoute("/others/:links")
-                                            ? "text-[#5D22B2]"
-                                            : "text-richblack-25"
-                                            }`}
-                                    >
-                                        <div className='h-full hover:border-b-2 transition-all rounded-b-md px-2'>
-                                            {link.title}
-                                        </div>
-                                        <IoIosArrowDropdown />
-                                        <div className="invisible absolute box-border flex flex-col rounded-md bg-richblack-5 p-4 text-richblack-600 opacity-0 transition-all duration-500 group-hover:visible group-hover:opacity-100 w-[130px] sm:w-[175px] -left-[120%]  sm:left-[10%] translate-x-[-10%] translate-y-[20%] -top-[200%] sm:top-[50%] z-20 ">
-                                            <div className='bg-richblack-5 h-5 w-5 rotate-45 absolute bottom-[90%]'></div>
-                                            {link?.sublinks?.map((sublink, index) => (
-                                                <Link
-                                                    to={sublink.url}
-                                                    key={index}
-                                                // onClick={ItemClick}
-                                                >
-                                                    <div className="hover:bg-richblack-50 py-2  px-3 rounded-md">
-                                                        <p>{sublink.title}</p>
-                                                    </div>
-                                                </Link>
-                                            ))}
-
-                                        </div>
-
+                                <Link
+                                    to={link?.url}
+                                    className={`${matchRoute(link?.url)
+                                        ? "text-[#5D22B2]"
+                                        : "text-richblack-100"
+                                        } hover:text-[#5D22B2] `}
+                                >
+                                    <div className='h-full hover:border-b-2 transition-all rounded-b-md px-2'>
+                                        {link.title}
                                     </div>
-                                ) : (
-                                    <Link
-                                        to={link?.url}
-                                        className={`${matchRoute(link?.url)
-                                            ? "text-[#5D22B2]"
-                                            : "text-richblack-100"
-                                            } hover:text-[#5D22B2] `}
-                                    // onClick={ItemClick}
-                                    ><div className='h-full hover:border-b-2 transition-all rounded-b-md px-2'>
-                                            {link.title}
-                                        </div>
-                                    </Link>
-                                )}
+                                </Link>
                             </li>
                         ))}
                     </ul>

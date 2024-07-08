@@ -14,7 +14,7 @@ export default function ActiveButton({
       type={type}
       className={`flex items-center border-neutral-200 ${
         outline ? "border border-yellow-50 bg-transparent" : "bg-yellow-50"
-      } cursor-pointer gap-x-2 rounded-md py-2 px-5 font-semibold text-richblack-900  ${customClasses}`}
+      } cursor-pointer gap-x-2 rounded-md py-[10px] px-2 font-semibold text-richblack-900  ${customClasses}`}
     >
       {children ? (
         <>

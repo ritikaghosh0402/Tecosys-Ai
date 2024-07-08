@@ -5,13 +5,19 @@ import { words } from "../../data/Constant";
 import "../../App.css";
 import Lottie from "lottie-react";
 import animationData from "../../data/RobortAnimation.json";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import HoverButton from "../common/hoverButton";
 
 function HeroSection() {
   const navigate = useNavigate();
   return (
     <div>
       <div className="w-10/12 mt-2 mx-auto ">
+        {/* <video
+      src="/blackhole.webm" type="video/webm" 
+      className="w-full h-[100vh] object-cover rotate-180"
+      >
+      </video> */}
         <div>
           <TextGenerateEffect
             words={words}
@@ -26,7 +32,7 @@ function HeroSection() {
             className="h-[70vh] pb-4 mb-4 "
           />
 
-          <div className="relative z-10">
+          <div className="relative z-10 flex gap-5 items-center">
             <a href="/Tecosys.pdf" target="_blank">
               <ActiveButton
                 text={"Read Whitepaper"}
@@ -36,6 +42,9 @@ function HeroSection() {
                 <FaArrowRight />
               </ActiveButton>
             </a>
+            <Link to="/invest">
+              <HoverButton text={"Invest Now"} />
+            </Link>
           </div>
         </div>
       </div>

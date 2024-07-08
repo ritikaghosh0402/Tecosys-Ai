@@ -13,22 +13,8 @@ export const NavbarLinks = [
         url: '/services'
     }, {
         id: 4,
-        title: 'Pricing',
-        url: '/pricing'
-    }, {
-        id: 5,
-        title: 'Others',
-        sublinks: [
-            {
-                id: 1,
-                title: 'Team',
-                url: '/others/team'
-            }, {
-                id: 2,
-                title: 'FAQs',
-                url: '/others/faqs'
-            }
-        ]
+        title: 'Invest',
+        url: '/invest'
     },
 ]
 

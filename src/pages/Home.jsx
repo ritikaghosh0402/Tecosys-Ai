@@ -11,7 +11,7 @@ function Home() {
       {/* <Vortex> */}
       <HeroSection />
       {/* </Vortex> */}
-      <Features />
+      {/* <Features /> */}
       <Ecosystem />
       <GeminiSection />
     </div>
