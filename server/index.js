@@ -1,9 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const stripe = require('stripe')('sk_test_51H')
-const uuid = require('uuid/v4');
-
-
+const { v4: uuid } = require('uuid');
 const app = express();
 app.use(express.json());
 app.use(cors());
