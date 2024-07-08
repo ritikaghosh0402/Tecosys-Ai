@@ -1,4 +1,9 @@
 [
+    
+    {
+        "country": "India",
+        "code": "+91"
+    },
     {
         "country": "Afghanistan",
         "code": "+93"
@@ -189,7 +194,15 @@
     },
     {
         "country": "Dominican Republic",
-        "code": "+1-809, +1-829, +1-849"
+        "code": "+1-809"
+    },
+    {
+        "country": "Dominican Republic",
+        "code": "+1-829"
+    },
+    {
+        "country": "Dominican Republic",
+        "code": "+1-849"
     },
     {
         "country": "East Timor",
@@ -294,10 +307,6 @@
     {
         "country": "Iceland",
         "code": "+354"
-    },
-    {
-        "country": "India",
-        "code": "+91"
     },
     {
         "country": "Indonesia",
@@ -757,7 +766,11 @@
     },
     {
         "country": "Vatican City",
-        "code": "+39-06, +379"
+        "code": "+39-06"
+    },
+    {
+        "country": "Vatican City",
+        "code": "+379"
     },
     {
         "country": "Venezuela",

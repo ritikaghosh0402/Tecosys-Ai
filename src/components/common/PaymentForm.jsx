@@ -1,12 +1,36 @@
 import { useEffect } from 'react'
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
-import CountryCode from '../../data/countrycode.json';
+import CountryCode from '../../data/countrycode.json'
 // import { apiConnector } from '../../services/apiConnector';
 // import { contactusEndpoint } from '../../services/apis';
 // import { toast } from 'react-hot-toast';
 
-export default function ContactUsForm() {
+import "../../App.css";
+const prod = [
+    {
+        service: "Service 1",
+        amount: 100
+    },
+    {
+        service: "Service 2",
+        amount: 200
+    },
+    {
+        service: "Service 3",
+        amount: 300
+    },
+    {
+        service: "Service 4",
+        amount: 400
+    },
+    {
+        service: "Service 5",
+        amount: 500
+    }
+]
+
+export default function PaymentForm() {
     const [loading, setLoading] = useState(false);
     const {
         register,
@@ -14,6 +38,7 @@ export default function ContactUsForm() {
         reset,
         formState: { errors, isSubmitSuccessful }
     } = useForm();
+    const [service, setService] = useState([prod[0].service, prod[0].amount])
     const submitContactForm = async (data, e) => {
         // const toastId = toast.loading("Loading ...")
         try {
@@ -41,6 +66,8 @@ export default function ContactUsForm() {
                 email: "",
                 phoneNo: "",
                 message: "",
+                amount: "",
+                service: prod[0].service,
 
             })
         }
@@ -149,6 +176,68 @@ export default function ContactUsForm() {
                     </div>
                 </div>
 
+                <div className='w-full '>
+                    <div className='flex w-full gap-5 '>
+                        <label htmlFor="service" className='w-1/3 mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5'>Service <span className='text-pink-300'>*</span>
+
+                            <div className=' w-auto '>
+                                <select
+                                    name="dropdown"
+                                    id="dropdown"
+                                    {...register("service", { required: true })}
+                                    style={{
+                                        boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
+                                    }}
+
+                                    className="w-full rounded-[0.5rem] bg-richblack-800 py-[12px] pl-[8px] text-richblack-5"
+                                    onChange={(e) => {
+                                        setService(e.target.value.split(','))
+                                        console.log()
+
+                                    }}
+                                >
+                                    {
+                                        prod.map((element, index) => {
+                                            return (
+                                                <option key={index} value={[element.service, element.amount]}>
+                                                    {element.service}
+                                                </option>
+                                            )
+                                        })
+                                    }
+                                </select>
+                            </div>
+                        </label>
+
+
+                        <label htmlFor="service" className='w-2/3 mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5'>Amount <span className='text-pink-300'>*</span>
+                            <div className=''>
+                                <div className="w-full relative ">
+                                    <input
+                                        // value={service[1]}
+                                        onChange={(e) => { setService([service[0], e.target.value]); console.log(service) }}
+                                        type="number"
+                                        id="amount"
+                                        {...register("amount",
+                                            {
+                                                required: { value: true, message: "Please enter Amount" },
+                                                min: { value: service[1], message: "Amount should be greater than " + service[1] + " for " + service[0] },
+                                            })}
+
+                                        style={{
+                                            boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
+                                        }}
+                                        className="w-full rounded-[0.5rem] bg-richblack-800 py-[12px] pl-[8px] text-richblack-5 "
+                                    />
+                                    {errors.amount && (<span className='sm:absolute -bottom-6 left-0 text-pink-300'>{errors.amount.message}</span>)}
+
+                                </div>
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+
                 <div className='flex flex-col relative'>
                     <label htmlFor="message" className='mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5'>Message<span className='text-pink-300'>*</span>
                         <textarea
@@ -169,7 +258,7 @@ export default function ContactUsForm() {
 
                 <button type="submit" className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px]  font-semibold text-lg text-richblack-900"
                     disabled={loading}>
-                    Send Message
+                    Pay Now
                 </button>
             </div>
         </form>
