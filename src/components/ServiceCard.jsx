@@ -27,7 +27,7 @@ const EcosystemCard = ({
   return (
     <div
       id="ecosystem-card"
-      className="relative m-2 cursor-pointer ecosystem-card"
+      className="relative m-2 cursor-pointer ecosystem-card border-2 "
     >
       {!isMobile ? (
         <div className="flex items-center justify-between">
@@ -69,7 +69,7 @@ const EcosystemCard = ({
       ) : (
         <div className="flex items-center justify-between">
           <div
-            className={`w-[50px] h-[50px] rounded-full border-2 border-neutral-800 p-7 flex items-center justify-center hover:bg-purple-glow transition-colors duration-300`}
+            className={`w-[50px] h-[50px] rounded-full border-2 border-neutral-800 p-7 flex items-center justify-center hover:bg-purple-glow transition-colors duration-300 `}
             style={{
               backgroundColor:
                 rotation % 360 > setAngle[0] && rotation % 360 < setAngle[1]
@@ -78,6 +78,7 @@ const EcosystemCard = ({
               padding: "0.5rem",
               transform: rotation ? `rotate(-${rotation}deg)` : "rotate(0deg)",
             }}
+            
             // onMouseEnter={() => {
             //   setIsHovered(true), setHoveredTxt(index);
             // }}

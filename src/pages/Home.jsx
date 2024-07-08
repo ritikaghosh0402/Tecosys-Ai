@@ -1,17 +1,24 @@
 import HeroSection from "../components/Home/HeroSection";
 import ServicesAnimation from "../components/ServicesAnimation";
 import GeminiSection from "../components/GeminiSection";
-// import Features from "../components/Home/Features";
-// import {Vortex} from "../components/ui/vortex";
-// import StarBackground from "../components/ui/StarBackground";
+import ParticlesComponent from "../components/common/ParticleBacground";
+import SparklesCore from "../components/ui/sparkles";
 function Home() {
   return (
     <div className="text-richblack-5">
-      {/* <StarBackground className="" /> */}
-      {/* <Vortex> */}
+      
+      <ParticlesComponent id="particles"  />
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+      
       <HeroSection />
-      {/* </Vortex> */}
-      {/* <Features /> */}
       <ServicesAnimation/>
       <GeminiSection />
     </div>
