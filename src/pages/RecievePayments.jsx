@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import PaymentForm from "../components/common/PaymentForm";
 import Card from "../components/common/Card";
 

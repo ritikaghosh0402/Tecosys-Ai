@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import CountryCode from '../../data/countrycode.json'
+import StripeCheckout from 'react-stripe-checkout';
+
 // import { apiConnector } from '../../services/apiConnector';
 // import { contactusEndpoint } from '../../services/apis';
 // import { toast } from 'react-hot-toast';
@@ -32,6 +34,25 @@ const prod = [
 
 export default function PaymentForm() {
     const [loading, setLoading] = useState(false);
+    const makePayment = (token) => {
+        const body = {
+            token,
+            service
+        }
+
+        const headers = {
+            "Content-Type": "application/json"
+        }
+        return fetch(`http://localhost:8080/payment`, {
+            method: 'POST',
+            headers,
+            body: JSON.stringify(body)
+        }).then(response => {
+            console.log(response)
+            const { status } = response
+            console.log('Status', status)
+        }).catch(error => console.log(error))
+    }
     const {
         register,
         handleSubmit,
@@ -39,6 +60,7 @@ export default function PaymentForm() {
         formState: { errors, isSubmitSuccessful }
     } = useForm();
     const [service, setService] = useState([prod[0].service, prod[0].amount])
+    console.log(service)
     const submitContactForm = async (data, e) => {
         // const toastId = toast.loading("Loading ...")
         try {
@@ -259,6 +281,17 @@ export default function PaymentForm() {
                     disabled={loading}>
                     Pay Now
                 </button>
+                <StripeCheckout
+                    stripeKey='key'
+                    token={makePayment}
+                    amount={service[1] * 100}
+                    name={service[0]}
+                    currency='INR'
+                >
+                    <button className=''>
+                        Pay with Stripe
+                    </button>
+                </StripeCheckout>
             </div>
         </form>
     )

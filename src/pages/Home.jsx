@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import HeroSection from "../components/Home/HeroSection";
 import ServicesAnimation from "../components/ServicesAnimation";
 import GeminiSection from "../components/GeminiSection";

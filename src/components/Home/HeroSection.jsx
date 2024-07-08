@@ -13,8 +13,8 @@ import { GiPayMoney } from "react-icons/gi";
 function HeroSection() {
   const navigate = useNavigate();
   return (
-    <div>
-      <div className="w-10/12 mt-2 mx-auto ">
+    <div className=" ">
+      <div className="w-10/12 mx-auto ">
         {/* <video
       src="/blackhole.webm" type="video/webm" 
       className="w-full h-[100vh] object-cover rotate-180"
@@ -27,11 +27,11 @@ function HeroSection() {
           />
         </div>
 
-        <div className="w-full flex items-center flex-col mt-10  content-container ">
+        <div className="w-full flex items-center flex-col  content-container ">
           <Lottie
             animationData={animationData}
             loop={true}
-            className="h-[70vh] pb-4 mb-4 "
+            className="h-[61vh] w-full"
           />
 
           <div className="relative z-10 flex gap-10 items-center">
