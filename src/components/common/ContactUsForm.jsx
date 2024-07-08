@@ -166,10 +166,10 @@ export default function ContactUsForm() {
                     </label>
                 </div>
 
-                {/* <button type="submit" className="mt-6 rounded-[8px] bg-[#a36cef] py-[8px] px-[12px]  font-semibold text-lg text-richblack-5"
+                <button type="submit" className="mt-6 rounded-[8px] bg-[#a36cef] py-[8px] px-[12px]  font-semibold text-lg text-richblack-5"
                 disabled={loading}>
                     Send Message
-                </button> */}
+                </button>
 
             </div>
         </form>
