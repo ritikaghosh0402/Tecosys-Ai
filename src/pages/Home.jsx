@@ -3,6 +3,7 @@ import ServicesAnimation from "../components/ServicesAnimation";
 import GeminiSection from "../components/GeminiSection";
 import ParticlesComponent from "../components/common/ParticleBacground";
 import SparklesCore from "../components/ui/sparkles";
+import Collaborators from "../components/Collaborators";
 import ContactUs from "../components/Home/ContactUs";
 
 function Home() {
@@ -23,6 +24,7 @@ function Home() {
       <HeroSection />
       <ServicesAnimation/>
       <ContactUs />
+      <Collaborators/>
       <GeminiSection />
     </div>
   );
