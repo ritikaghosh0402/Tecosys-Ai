@@ -1,5 +1,5 @@
 import HeroSection from "../components/Home/HeroSection";
-import Ecosystem from "../components/Ecosystem";
+import ServicesAnimation from "../components/ServicesAnimation";
 import GeminiSection from "../components/GeminiSection";
 import Features from "../components/Home/Features";
 import {Vortex} from "../components/ui/vortex";
@@ -12,7 +12,7 @@ function Home() {
       <HeroSection />
       {/* </Vortex> */}
       {/* <Features /> */}
-      <Ecosystem />
+      <ServicesAnimation/>
       <GeminiSection />
     </div>
   );

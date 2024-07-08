@@ -2,7 +2,7 @@
 import { isMobile } from "react-device-detect";
 import { useEffect } from "react";
 
-const EcosystemCard = ({
+const ServiceCard = ({
   rotation,
   imgsrc,
   setHoveredTxt,
@@ -110,4 +110,4 @@ const EcosystemCard = ({
   );
 };
 
-export default EcosystemCard;
+export default ServiceCard;
