@@ -3,8 +3,12 @@ import ServicesAnimation from "../components/ServicesAnimation";
 import GeminiSection from "../components/GeminiSection";
 import ParticlesComponent from "../components/common/ParticleBacground";
 import SparklesCore from "../components/ui/sparkles";
+<<<<<<< HEAD
 import ContactUs from "../components/Home/ContactUs";
 
+=======
+import Collaborators from "../components/Collaborators";
+>>>>>>> 762e3af8a8ed2f5915368e727320ff9f20f7de40
 function Home() {
   return (
     <div className="text-richblack-5">
@@ -22,7 +26,11 @@ function Home() {
       
       <HeroSection />
       <ServicesAnimation/>
+<<<<<<< HEAD
       <ContactUs />
+=======
+      <Collaborators/>
+>>>>>>> 762e3af8a8ed2f5915368e727320ff9f20f7de40
       <GeminiSection />
     </div>
   );

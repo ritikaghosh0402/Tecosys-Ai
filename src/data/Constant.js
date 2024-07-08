@@ -108,3 +108,24 @@ export const FeaturesData = [
 ]
 
 export const words = `Explore the Next Generation AI Models with Tecosys`
+
+export const companies = [
+    {
+        id: 1,
+        name: "Aws Partner",
+        img: "/collaborators-Icon/Aws_partner.png",
+        nameImg: "Aws_partner",
+      },
+      {
+        id: 2,
+        name: "Equiconsulting Services",
+        img: "/collaborators-Icon/Equiconsulting_services_pvt_ltd.png",
+        nameImg: "/Equiconsulting_services_pvt_ltd",
+      },
+      {
+        id: 3,
+        name: "Microsoft for Startups",
+        img: "/collaborators-Icon/Microsoft_for_startups.png",
+        nameImg: "Microsoft_for_startups",
+      },
+]
