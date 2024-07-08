@@ -32,7 +32,7 @@ function HeroSection() {
             className="h-[70vh] pb-4 mb-4 "
           />
 
-          <div className="relative z-10 flex gap-5 items-center">
+          <div className="relative z-10 flex gap-10 items-center">
             <a href="/Tecosys.pdf" target="_blank">
               <ActiveButton
                 text={"Read Whitepaper"}
@@ -42,9 +42,11 @@ function HeroSection() {
                 <FaArrowRight />
               </ActiveButton>
             </a>
+            <div>
             <Link to="/invest">
               <HoverButton text={"Invest Now"} />
             </Link>
+            </div>
           </div>
         </div>
       </div>
