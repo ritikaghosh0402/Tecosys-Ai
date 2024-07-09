@@ -4,8 +4,8 @@ import { ImCheckboxChecked } from "react-icons/im";
 
 const AboutUs = () => {
   return (
-    <section className=" w-full mt-10 text-white font-mullish r pb-[8rem] pt-[8rem]">
-      <div className="w-10/12 max-w-[1080px]  mx-auto pt-4">
+    <section className=" w-full mt-10 text-white font-mullish pb-[8rem] pt-[8rem] ">
+      <div className="w-10/12 max-w-[1080px] mx-auto pt-4 ">
         {/* heading */}
         <div className="w-full space-y-2 ">
           <h2 className="text-center font-bold text-2xl md:text-5xl leading-[1.2]">
@@ -13,7 +13,7 @@ const AboutUs = () => {
           </h2>
           <div className="h-1 w-6 bg-greenLight mx-auto relative"></div>
         </div>
-        <div className="max-w-[90rem] bg-richblack-900 border border-slate-600 rounded-md mx-auto mt-10 flex relative">
+        <div className="max-w-[90rem] border border-slate-600 rounded-2xl mx-auto mt-10 flex relative ">
           <div className="p-10 flex flex-col justify-between ">
             <p className="font-medium text-[1.4rem] bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-300">
               In the era of rapid advancement in generative AI, Tecosys is
