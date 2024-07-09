@@ -16,7 +16,6 @@ function App() {
   return (
     <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter border">
       <Navbar />
-
       {/* <ParticlesComponent id="particles"  />
         <SparklesCore
           id="tsparticlesfullpage"
@@ -27,14 +26,10 @@ function App() {
           className="w-full h-full"
           particleColor="#FFFFFF"
         /> */}
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/invest" element={<RecievePayments />} />
         </Routes>
-
-
-
     </div>
   );
 }
