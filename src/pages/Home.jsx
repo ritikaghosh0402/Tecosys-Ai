@@ -20,7 +20,7 @@ function Home() {
           minSize={0.6}
           maxSize={1.4}
           particleDensity={100}
-          className="w-full h-full"
+          className="w-full h-full hidden md:block"
           particleColor="#FFFFFF"
         />
       
