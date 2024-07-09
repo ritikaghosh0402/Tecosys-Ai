@@ -50,3 +50,29 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+
+.move-image-1 {
+  animation: img-mv-1 10s linear infinite;
+}
+
+.move-image-2 {
+  animation: img-mv-2 10s linear infinite;
+}
+@keyframes img-mv-1 {
+  from {
+    top: 90%;
+  }
+
+  to {
+    top: -205%;
+  }
+}
+@keyframes img-mv-2 {
+  from {
+    top: 555%;
+  }
+  to {
+    top: 0%;
+  }
+  }

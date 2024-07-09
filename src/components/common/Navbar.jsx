@@ -4,21 +4,23 @@ import { Link, matchPath } from 'react-router-dom'
 import { IoIosArrowDropdown } from "react-icons/io";
 import { useLocation } from 'react-router-dom';
 import { NavbarLinks } from '../../data/Constant'
-
+import { useState } from 'react';
+import ResponsiveNav from './ResponsiveNav';
 
 
 function Navbar() {
     const location = useLocation();
+    const [loading, subLinks] = useState(false);
     const matchRoute = (route) => matchPath({ path: route }, location.pathname);
     return (
         <div className='w-full flex place-content-center '>
-            < div className='w-10/12 flex justify-between items-center py-2 px-10 md:px-8 '>
+            < div className='w-full sm:w-11/12 md:w-10/12 flex justify-between items-center py-2 md:px-10 sm:px-10  px-5 '>
                 <div>
                     <Link to='/'>
                         <img src={logo} alt="logo" width={55} className='rounded-full' />
                     </Link>
                 </div>
-                <nav className='text-lg'>
+                <nav className='text-lg hidden md:block'>
                     <ul className={`flex  gap-4 md:gap-5 text-richblack-25 `}>
                         {NavbarLinks.map((link, index) => (
                             
@@ -40,6 +42,7 @@ function Navbar() {
                         ))}
                     </ul>
                 </nav>
+                <ResponsiveNav loading={loading} subLinks={subLinks}/>
             </div>
         </div>
     )

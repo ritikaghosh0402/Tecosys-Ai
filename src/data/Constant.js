@@ -1,3 +1,14 @@
+/* eslint-disable no-unused-vars */
+
+
+import aws from '../../public/collaborators icon/Aws-Partner-Logo.png'
+import equiconsulting from '../../public/collaborators icon/Equiconsulting-services .png'
+import microsoft from '../../public/collaborators icon/msaz.png'
+import google from '../../public/collaborators icon/gcd.png'
+import azure from '../../public/collaborators icon/azr.png'
+
+
+
 export const NavbarLinks = [
     {
         id: 1,
@@ -78,54 +89,37 @@ export const HeroButton = [
     }
 ]
 
-export const FeaturesData = [
-    {
-        id: 1,
-        title: 'Multilingual Model Support',
-        description: 'Our AI chatbots excel in multilingual communication, effortlessly interacting in various languages to ensure global inclusivity.',
-        
-    },
-    {
-        id: 2,
-        title: 'Image & Video Generation',
-        description: 'Transforming text into stunning visuals, our AI chatbots generate high-quality images and videos, bringing your ideas to life.'
-    },
-    {
-        id: 3,
-        title: 'Code Generation & Debugging',
-        description: 'Effortlessly generate and debug code with our AI, streamlining development processes and enhancing productivity.'
-    },
-    {
-        id: 4,
-        title: 'User-Friendly Environment',
-        description: 'Enjoy seamless interactions with our intuitive, user-friendly environment designed for maximum productivity and ease of use.'
-    },
-    {
-        id: 5,
-        title: 'AI Engineer, AI Doctor, AI Researcher',
-        description: 'Pioneering AI solutions, enhancing healthcare with intelligent diagnostics, and driving groundbreaking research for innovative discoveries.'
-    },
-]
-
 export const words = `Explore the Next Generation AI Models with Tecosys`
 
 export const companies = [
     {
         id: 1,
         name: "Aws Partner",
-        img: "/collaborators-Icon/Aws_partner.png",
+        img: aws,
         nameImg: "Aws_partner",
       },
       {
         id: 2,
         name: "Equiconsulting Services",
-        img: "/collaborators-Icon/Equiconsulting_services_pvt_ltd.png",
+        img: equiconsulting,
         nameImg: "/Equiconsulting_services_pvt_ltd",
       },
       {
         id: 3,
         name: "Microsoft for Startups",
-        img: "/collaborators-Icon/Microsoft_for_startups.png",
+        img: microsoft,
         nameImg: "Microsoft_for_startups",
+      },
+      {
+        id: 4,
+        name: "Google Cloud",
+        img: google,
+        nameImg: "google cloud",
+      },
+      {
+        id: 5,
+        name: "Microsoft Azure",
+        img: azure,
+        nameImg: "Microsoft Azure",
       },
 ]

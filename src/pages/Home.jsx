@@ -11,7 +11,7 @@ import ContactUs from "../components/Home/ContactUs";
 function Home() {
   return (
     <div className="text-richblack-5">
-      {/* <ParticlesComponent id="particles"  />
+      <ParticlesComponent id="particles"  />
     
         <SparklesCore
           id="tsparticlesfullpage"
@@ -21,7 +21,7 @@ function Home() {
           particleDensity={100}
           className="w-full h-full"
           particleColor="#FFFFFF"
-        /> */}
+        />
       
       <HeroSection />
       <ServicesAnimation/>

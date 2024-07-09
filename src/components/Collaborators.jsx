@@ -1,10 +1,8 @@
 /* eslint-disable no-unused-vars */
 
-import React from "react";
-import Aws_partner from "/collaborators-Icon/Aws_partner.png";
-import Equiconsulting_services_pvt_ltd from "/collaborators-Icon/Equiconsulting_services_pvt_ltd.png";
-import Microsoft_for_startups from "/collaborators-Icon/Microsoft_for_startups.png";
-import { companies } from "../data/Constant";
+
+import { companies } from "../data/Constant"
+import '../App.css'
 
 const Collaborators = () => {
   return (
@@ -13,21 +11,32 @@ const Collaborators = () => {
         Our Collaborators
       </h1>
 
-      <div className="flex flex-wrap items-center justify-between mx-auto max-w-[80vw] gap-4 md:gap-16 mt-10 bg-black p-8 rounded-lg shadow-lg">
-        {companies.map((company) => (
-          <div
-            key={company.id}
-            className="flex flex-col items-center w-20 h-20 gap-2 bg-white p-2 rounded-md shadow-md"
-          >
-            <img
-              src={company.img}
-              alt={company.name}
-              className="h-full w-full object-contain"
-            />
-            <p className="text-xl text-center">{company.name}</p>
+      <section className="flex justify-center items-center  ">
+        <div className="h-[500px] w-[400px] overflow-hidden relative">
+          {/* <div className="w-full h-[50px] z-1 absolute top-0" style="background: linear-gradient(-180deg, white);">
+                    </div>  */}
+          <div className="h-[100px] absolute top-0 bg-black"></div>
+          <div className=" w-full h-[100px] bg-gradient-to-b from-white absolute top-0 z-30"></div>
+          <div className="flex">
+            <div className="w-full  move-image-1  absolute bottom-0 z-10">
+              {
+                companies.map((company) =>
+                  <img key={company.id} src={company.img} alt="" className="w-[200px] h-[200px] object-contain" />
+                )
+              }
+            </div>
+            <div className="w-full  move-image-2  absolute ">
+              {
+                companies.map((company) =>
+                  <img key={company.id} src={company.img} alt="" className="w-[200px] h-[200px] object-contain" />
+                )
+              }
+            </div>
           </div>
-        ))}
-      </div>
+          <div className=" w-full h-[100px] bg-gradient-to-t from-white ... absolute bottom-0 z-1"></div>
+        </div>
+      </section>
+
     </section>
   )
 };
