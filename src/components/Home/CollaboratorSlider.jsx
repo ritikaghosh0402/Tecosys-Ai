@@ -10,7 +10,7 @@ const CollaboratorSlider = () => {
 
   return (
     <div className="text-richblack-50 w-full flex justify-center">
-      <div className="my-[50px] h-[170px]  lg:max-w-maxContent flex place-content-center ">
+      <div className="my-[50px] h-[170px] w-full  lg:max-w-maxContent flex place-content-center ">
         <Swiper
           slidesPerView={6}
           breakpoints={{
@@ -38,7 +38,7 @@ const CollaboratorSlider = () => {
           freeMode={true}
           autoplay={{ delay: 1000, disableOnInteraction: false }}
           modules={[Autoplay, Navigation, Pagination]}
-          
+          className="flex justify-center w-full "
         >
           {companies.map((colaborator, i) => (
             <SwiperSlide key={i} className="rounded-lg flex place-content-center border bg-[#6235a0] shadow-lg shadow-[#b99ce0]">
