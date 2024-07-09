@@ -13,7 +13,7 @@ const AboutUs = () => {
           </h2>
           <div className="h-1 w-6 bg-greenLight mx-auto relative"></div>
         </div>
-        <div className="max-w-[90rem] border border-slate-600 rounded-2xl mx-auto mt-10 flex relative ">
+        <div className="max-w-[90rem] bg-richblack-900 border border-slate-600 rounded-2xl mx-auto mt-10 flex relative ">
           <div className="p-10 flex flex-col justify-between ">
             <p className="font-medium text-[1.4rem] bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-300">
               In the era of rapid advancement in generative AI, Tecosys is
