@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 
 import HeroSection from "../components/Home/HeroSection";
-import ServicesAnimation from "../components/ServicesAnimation";
-import GeminiSection from "../components/GeminiSection";
+import ServicesAnimation from "../components/Home/ServicesAnimation";
+import GeminiSection from "../components/Home/GeminiSection";
 import ParticlesComponent from "../components/common/ParticleBacground";
 import SparklesCore from "../components/ui/sparkles";
-import Collaborators from "../components/Collaborators";
 import ContactUs from "../components/Home/ContactUs";
-import AboutUs from "../components/AboutUs";
+import AboutUs from "../components/Home/AboutUs";
+import Colab from "../components/Home/Colab";
 
 function Home() {
   return (
@@ -27,7 +27,7 @@ function Home() {
       <HeroSection />
       <AboutUs/>
       <ServicesAnimation/>
-      <Collaborators/>
+      <Colab/>
       <ContactUs />
       <GeminiSection />
     </div>

@@ -36,6 +36,7 @@
     "react-stripe-checkout": "^2.6.3",
     "react-tsparticles": "^2.12.2",
     "simplex-noise": "^4.0.1",
+    "swiper": "^11.1.4",
     "tailwind-merge": "^2.4.0",
     "tsparticles": "^3.5.0"
   },
