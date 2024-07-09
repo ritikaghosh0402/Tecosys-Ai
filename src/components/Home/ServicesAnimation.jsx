@@ -99,7 +99,7 @@ const ServicesAnimation = () => {
               <h1 className="text-5xl font-medium text-white md:text-10xl">
                 {centerText[hoveredTxt].title}
               </h1>
-              <p className="mt-3 text-gray-400 text-md">
+              <p className="mt-3 text-pure-greys-300 text-md">
                 {centerText[hoveredTxt].text}
               </p>
             </div>
@@ -114,7 +114,7 @@ const ServicesAnimation = () => {
             >
               {/* Spacing the cards evenly */}
               <div
-                className="absolute -top-[110px] left-[135px] w-16 h-16 rounded-full flex items-center justify-center"
+                className="absolute -top-[110px] left-[135px]  w-16 h-16 rounded-full flex items-center justify-center"
                 onMouseEnter={() => setIsHoveredOrClicked(true)}
                 onMouseLeave={() => setIsHoveredOrClicked(false)}
                 onClick={() => setIsHoveredOrClicked(true)}
@@ -274,7 +274,7 @@ const ServicesAnimation = () => {
               <h1 className="text-xl font-bold text-white md:text-10xl">
                 {centerText[hoveredTxt].title}
               </h1>
-              <p className="mt-3 text-sm text-gray-400">
+              <p className="mt-3 text-sm text-pure-greys-300">
                 {centerText[hoveredTxt].text}
               </p>
             </div>
