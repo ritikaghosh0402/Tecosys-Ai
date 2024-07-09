@@ -8,8 +8,7 @@ import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSl
 
 
 const ParticlesComponent = ({ id }) => {
-  const screenWidth = window.innerWidth;
-  console.log(screenWidth);
+  
   const [init, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -423,9 +422,7 @@ const ParticlesComponent = ({ id }) => {
     }),
     [],
   );
-  if (screenWidth < 768) {
-    return null;
-  }
+
   return <Particles id={id} init={particlesLoaded} options={options} />;
 };
 

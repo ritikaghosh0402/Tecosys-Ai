@@ -12,7 +12,9 @@ import Colab from "../components/Home/Colab";
 function Home() {
   return (
     <div className="text-richblack-5">
+      <div className="hidden md:block">
       <ParticlesComponent id="particles"  />
+      </div>
     
         <SparklesCore
           id="tsparticlesfullpage"
