@@ -16,7 +16,7 @@ function Navbar() {
         <div className='w-full flex place-content-center '>
             < div className='w-full sm:w-11/12 md:w-10/12 flex justify-between items-center py-2 md:px-10 sm:px-10  px-5 '>
                 <div>
-                    <Link to='/'>
+                    <Link to='https://www.tecosys.in/' target='_blank'>
                         <img src={logo} alt="logo" width={55} className='rounded-full' />
                     </Link>
                 </div>

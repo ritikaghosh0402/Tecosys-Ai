@@ -7,6 +7,7 @@ import ParticlesComponent from "../components/common/ParticleBacground";
 import SparklesCore from "../components/ui/sparkles";
 import Collaborators from "../components/Collaborators";
 import ContactUs from "../components/Home/ContactUs";
+import AboutUs from "../components/AboutUs";
 
 function Home() {
   return (
@@ -24,6 +25,7 @@ function Home() {
         />
       
       <HeroSection />
+      <AboutUs/>
       <ServicesAnimation/>
       <Collaborators/>
       <ContactUs />
