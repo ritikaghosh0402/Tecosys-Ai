@@ -20,10 +20,10 @@ function HeroSection() {
       className="w-full h-[100vh] object-cover rotate-180"
       >
       </video> */}
-        <div>
+        <div className="relative">
           <TextGenerateEffect
             words={words}
-            className="w-[80%] mx-auto text-center text-richblack-25 text-6xl leading-tight "
+            className="w-[80%] mx-auto text-center text-richblack-25 text-6xl leading-tight z-50"
           />
         </div>
 
