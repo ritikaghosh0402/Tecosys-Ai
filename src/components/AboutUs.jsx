@@ -26,8 +26,8 @@ const AboutUs = () => {
               innovation.
             </p>
 
-            <div className="flex p-6 mt-10 justify-center items-center ">
-              <div className="Left flex w-1/2 ">
+            <div className="flex flex-col md:flex-row p-6 mt-10 justify-center items-center ">
+              <div className="Left flex w-full md:w-1/2 ">
                 <ul className="flex  flex-col gap-4 text-lg opacity-90">
                   <li className="flex  items-center ">
                     <ImCheckboxChecked className="mr-3" />
@@ -57,7 +57,7 @@ const AboutUs = () => {
                 </ul>
               </div>
 
-              <div className="Right w-1/2">
+              <div className="Right w-full md:w-1/2">
                 <Lottie
                   animationData={AboutUsAnimation}
                   loop={true}
