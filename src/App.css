@@ -51,28 +51,44 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-
-.move-image-1 {
-  animation: img-mv-1 10s linear infinite;
-}
-
-.move-image-2 {
-  animation: img-mv-2 10s linear infinite;
-}
-@keyframes img-mv-1 {
-  from {
-    top: 90%;
+  #app {
+    height: 100%;
   }
-
-  to {
-    top: -205%;
+  html,
+  body {
+    position: relative;
+    height: 100%;
   }
-}
-@keyframes img-mv-2 {
-  from {
-    top: 555%;
+  
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
   }
-  to {
-    top: 0%;
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
   }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: #fff; */
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  

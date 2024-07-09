@@ -1,6 +1,5 @@
-import React from "react";
 import Lottie from "lottie-react";
-import AboutUsAnimation from "../data/AboutUsAnimation.json";
+import AboutUsAnimation from "../../data/AboutUsAnimation.json";
 import { ImCheckboxChecked } from "react-icons/im";
 
 const AboutUs = () => {
@@ -8,7 +7,7 @@ const AboutUs = () => {
     <section className=" w-full mt-10 text-white font-mullish r pb-[8rem] pt-[8rem]">
       <div className="w-10/12 max-w-[1080px]  mx-auto pt-4">
         {/* heading */}
-        <div className="w-full space-y-2">
+        <div className="w-full space-y-2 ">
           <h2 className="text-center font-bold text-2xl md:text-5xl leading-[1.2]">
             Get to Know About Tecosys
           </h2>
