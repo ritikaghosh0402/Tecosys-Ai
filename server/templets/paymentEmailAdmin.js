@@ -71,7 +71,7 @@ exports.paymentEmailAdmin = (name, amount, orderId, paymentId) => {
     <body>
         <div class="container">
             <a href=${process.env.FRONTEND_URL}>
-            <img class="logo" src="" alt="Tecosys Logo">
+            <img class="logo" src="https://asset.cloudinary.com/dczs4lew7/a0d6dd68984f227dcc663f82419b665d" alt="Tecosys Logo">
             </a>
             <div class="message">Payment Confirmation</div>
             <div class="body">
