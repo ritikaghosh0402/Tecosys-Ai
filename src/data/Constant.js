@@ -19,14 +19,14 @@ export const NavbarLinks = [
         title: 'About',
         url: 'about'
     },{
-        id: 3,
-        title: 'Contact Us',
-        url: 'contact'
-    }, {
         id: 4,
         title: 'Services',
         url: 'services'
-    }, {
+    },{
+        id: 3,
+        title: 'Contact Us',
+        url: 'contact'
+    },  {
         id: 5,
         title: 'Invest',
         url: '/invest'
