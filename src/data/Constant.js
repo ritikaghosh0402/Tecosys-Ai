@@ -17,15 +17,15 @@ export const NavbarLinks = [
     }, {
         id: 2,
         title: 'About',
-        url: 'about'
+        url: '#about'
     },{
         id: 4,
         title: 'Services',
-        url: 'services'
+        url: '#services'
     },{
         id: 3,
         title: 'Contact Us',
-        url: 'contact'
+        url: '#contact'
     },  {
         id: 5,
         title: 'Invest',
