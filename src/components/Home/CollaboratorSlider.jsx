@@ -38,7 +38,7 @@ const CollaboratorSlider = () => {
           freeMode={true}
           autoplay={{ delay: 1000, disableOnInteraction: false }}
           modules={[Autoplay, Navigation, Pagination]}
-          className="flex justify-center w-full "
+          className="flex justify-center sm:w-full w-[90%] "
         >
           {companies.map((colaborator, i) => (
             <SwiperSlide key={i} className="rounded-lg flex place-content-center border bg-[#6235a0] shadow-lg shadow-[#b99ce0]">
