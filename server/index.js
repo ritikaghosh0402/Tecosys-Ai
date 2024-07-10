@@ -7,8 +7,8 @@ const contact = require('./routes/contact')
 require('dotenv').config();
 
 const port = process.env.PORT || 8080;
-const app = express();
-app.use(express.json());
+const app = express()
+app.use(express.json())
 app.use(
     cors({
         origin: process.env.FRONTEND_URL,

@@ -66,7 +66,6 @@ exports.verifyPayment = async (req, res) => {
         .createHmac("sha256", process.env.RAZORPAY_SECRET)
         .update(body.toString())
         .digest("hex");
-        console.log("i am here")
   
       if (generated_signature == razorpay_signature) {
         return res
