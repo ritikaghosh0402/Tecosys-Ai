@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
 import { isMobile } from "react-device-detect";
-import addfile from "/ecosystem_icons/addfile.png";
-import img from "/ecosystem_icons/img.png";
-import light from "/ecosystem_icons/light.png";
-import present from "/ecosystem_icons/present.png";
-import shop from "/ecosystem_icons/shop.png";
-import tool from "/ecosystem_icons/tool.png";
-import tv from "/ecosystem_icons/tv.png";
 
-import vedio from "/ecosystem_icons/vedio.png";
+import chatbot from "/services_icon/Intelligent AI Chatbot.png";
+import hospital from "/services_icon/AI-based Hospital Management System.png";
+import education from "/services_icon/AI-based Education Management System.png";
+import event from "/services_icon/AI-based Event Management System.png";
+import researcher from "/services_icon/AI Researcher.png";
+import doctor from "/services_icon/AI Doctor.png";
+import bot from "/services_icon/Multimedia Bot Builder.png";
+import lawyer from "/services_icon/AI Lawyer.png";
 
 const ServicesAnimation = () => {
   const [rotation, setRotation] = useState(0);
@@ -126,7 +126,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={0}
-                    imgsrc={addfile}
+                    imgsrc={lawyer}
                     hoveredTxt={centerText[0].text}
                   />
                 </div>
@@ -142,7 +142,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={1}
-                    imgsrc={img}
+                    imgsrc={hospital}
                     hoveredTxt={centerText[1].text}
                   />
                 </div>
@@ -158,7 +158,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={2}
-                    imgsrc={light}
+                    imgsrc={education}
                     hoveredTxt={centerText[2].text}
                   />
                 </div>
@@ -174,7 +174,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={3}
-                    imgsrc={present}
+                    imgsrc={event}
                     hoveredTxt={centerText[3].text}
                   />
                 </div>
@@ -190,7 +190,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={4}
-                    imgsrc={shop}
+                    imgsrc={researcher}
                     hoveredTxt={centerText[4].text}
                   />
                 </div>
@@ -206,7 +206,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={5}
-                    imgsrc={tool}
+                    imgsrc={doctor}
                     hoveredTxt={centerText[5].text}
                   />
                 </div>
@@ -222,7 +222,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={6}
-                    imgsrc={tv}
+                    imgsrc={bot}
                     hoveredTxt={centerText[6].text}
                   />
                 </div>
@@ -238,7 +238,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={7}
-                    imgsrc={vedio}
+                    imgsrc={chatbot}
                     hoveredTxt={centerText[7].text}
                   />
                 </div>
@@ -301,7 +301,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={0}
-                    imgsrc={addfile}
+                    imgsrc={lawyer}
                     hoveredTxt={centerText[0].text}
                   />
                 </div>
@@ -317,7 +317,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={1}
-                    imgsrc={img}
+                    imgsrc={hospital}
                     hoveredTxt={centerText[1].text}
                   />
                 </div>
@@ -333,7 +333,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={2}
-                    imgsrc={light}
+                    imgsrc={education}
                     hoveredTxt={centerText[2].text}
                   />
                 </div>
@@ -349,7 +349,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={3}
-                    imgsrc={present}
+                    imgsrc={event}
                     hoveredTxt={centerText[3].text}
                   />
                 </div>
@@ -365,7 +365,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={4}
-                    imgsrc={shop}
+                    imgsrc={researcher}
                     hoveredTxt={centerText[4].text}
                   />
                 </div>
@@ -381,7 +381,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={5}
-                    imgsrc={tool}
+                    imgsrc={doctor}
                     hoveredTxt={centerText[5].text}
                   />
                 </div>
@@ -397,7 +397,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={6}
-                    imgsrc={tv}
+                    imgsrc={bot}
                     hoveredTxt={centerText[6].text}
                   />
                 </div>
@@ -413,7 +413,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={7}
-                    imgsrc={vedio}
+                    imgsrc={chatbot}
                     hoveredTxt={centerText[7].text}
                   />
                 </div>
