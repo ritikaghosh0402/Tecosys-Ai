@@ -29,7 +29,7 @@ export const NavbarLinks = [
     }, {
         id: 5,
         title: 'Invest',
-        url: 'invest'
+        url: '/invest'
     },
 ]
 

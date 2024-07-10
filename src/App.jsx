@@ -14,7 +14,7 @@ import './App.css'
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
   return (
-    <div className="w-[100vw] min-h-screen bg-richblack-900 flex flex-col font-inter border">
+    <div className="w-[100vw] min-h-screen bg-richblack-900 flex flex-col font-inter border ">
       <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
