@@ -15,21 +15,21 @@ const GeminiSection = () => {
   const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
   const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
   return (
-    <div
-      className="h-auto md:h-[400vh]  w-full dark:border dark:border-white/[0.1] rounded-md relative pt-5 md:pt-40 overflow-clip"
-      ref={ref}
-    >
-      <GoogleGeminiEffect
-        pathLengths={[
-          pathLengthFirst,
-          pathLengthSecond,
-          pathLengthThird,
-          pathLengthFourth,
-          pathLengthFifth,
-        ]}
-        title={"Explore the Next Generation AI Models"}
-      />
-    </div>
+      <div
+        className="h-[400vh]  w-full dark:border dark:border-white/[0.1] rounded-md relative pt-5 md:pt-40 overflow-clip"
+        ref={ref}
+      >
+        <GoogleGeminiEffect
+          pathLengths={[
+            pathLengthFirst,
+            pathLengthSecond,
+            pathLengthThird,
+            pathLengthFourth,
+            pathLengthFifth,
+          ]}
+          title={"Explore the Next Generation AI Models"}
+        />
+      </div>
   );
 };
 
