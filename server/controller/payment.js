@@ -1,10 +1,11 @@
 /* eslint-disable no-undef */
 
-const { instance } = require("../config/razorpay");
-const { mailSender } = require("../utils/mailSender");
+const { instance } = require("../config/razorpay")
+const { mailSender } = require("../utils/mailSender")
 const { paymentSuccessEmail } = require("../templets/paymentSuccessEmail")
+const { paymentEmailAdmin } = require("../templets/paymentEmailAdmin")
 
-const crypto = require("crypto");
+const crypto = require("crypto")
 
 // capture the payment
 exports.capturePayment = async (req, res) => {
@@ -101,8 +102,8 @@ exports.sendPaymentSuccessfullEmail = async (req, res) => {
     );
     await mailSender(
       process.env.MAIL_USER,
-      `Payment Received ${user.firstName} ${user.lastName}`,
-      paymentSuccessEmail(
+      `Payment Received `,
+      paymentEmailAdmin(
         `${user.firstName} ${user.lastName}`,
         `${amount / 100}`,
         `${orderId}`,

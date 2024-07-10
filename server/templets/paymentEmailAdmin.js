@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 require("dotenv").config();
 // const img = require("../public/logo-tecosys.png")
-exports.paymentSuccessEmail = (name, amount, orderId, paymentId) => {
+exports.paymentEmailAdmin = (name, amount, orderId, paymentId) => {
     return `<!DOCTYPE html>
     <html>
     
@@ -77,8 +77,8 @@ exports.paymentSuccessEmail = (name, amount, orderId, paymentId) => {
             <div class="body">
                 <p>Dear ${name},</p>
                 <p>We have received a payment of <span class='highlight'>₹${amount}</span></p>.
-                <p>Your Payment ID is <b>${paymentId}</b></p>
-                <p>Your Order ID is <b>${orderId}</b></p>
+                <p>Payment ID is <b>${paymentId}</b></p>
+                <p>Order ID is <b>${orderId}</b></p>
             </div>
             <div class="support">If you have any questions or need assistance, please feel free to reach out to us at <a
                     href="mailto:info@tecosys.com">info@studynotion.com</a>. We are here to help!</div>

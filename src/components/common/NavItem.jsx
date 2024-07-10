@@ -18,7 +18,11 @@ export default function NavItem({ customClass1, customClass2 }) {
           <li key={index}>
             <HashLink
               smooth
-              to={`${link.title=='Home' || link.title=='Invest' ?  `${link.url}`:`#${link.url}`}`}
+              to={
+                link.title === 'Home' || link.title === 'Invest'
+                  ? link.url
+                  : `/${link.url}`
+              }
               className={`${matchRoute(link?.url)
                 ? "text-[#a36cef] text-lg"
                 : "text-richblack-100 text-base"

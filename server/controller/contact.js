@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const { contactUsEmail } = require("../templets/contactFormRes")
 const { mailSender } = require("../utils/mailSender")
-
+const { contactDataAdmin } = require("../templets/contactDataAdmin")
 
 exports.contactUs = async (req, res) => {
   const { email, firstName, lastName, message, phoneNo, countrycode } = req.body
@@ -16,7 +16,7 @@ exports.contactUs = async (req, res) => {
     await mailSender(
       process.env.MAIL_USER,
       "Contact us message",
-      contactUsEmail(email, firstName, lastName, message, phoneNo, countrycode)
+      contactDataAdmin(email, firstName, lastName, message, phoneNo, countrycode)
     )
 
     // send email to admin
