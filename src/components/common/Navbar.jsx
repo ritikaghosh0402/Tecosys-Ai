@@ -5,6 +5,7 @@ import { IoIosArrowDropdown } from "react-icons/io";
 import { useLocation } from 'react-router-dom';
 import { NavbarLinks } from '../../data/Constant'
 import { useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import ResponsiveNav from './ResponsiveNav';
 
 
@@ -25,8 +26,9 @@ function Navbar() {
                         {NavbarLinks.map((link, index) => (
 
                             <li key={index}>
-                                <Link
-                                    to={link?.url}
+                                <HashLink
+                                    smooth 
+                                    to={`${link.title!='Home' ? `#${link.url}`:`${link.url}` }`}
                                     className={`${matchRoute(link?.url)
                                         ? "text-[#a36cef] border-b-2"
                                         : "text-richblack-100"
@@ -37,7 +39,7 @@ function Navbar() {
                                     {/* <div className='h-full  hover:border transition-all  px-2'> */}
                                     {link.title}
                                     {/* </div> */}
-                                </Link>
+                                </HashLink>
                             </li>
                         ))}
                     </ul>

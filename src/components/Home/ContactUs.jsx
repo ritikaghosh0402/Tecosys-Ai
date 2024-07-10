@@ -5,7 +5,7 @@ import Lottie from "lottie-react";
 
 function ContactUs() {
   return (
-    <div className="mt-10 p-4 px-5">
+    <div id="contact" className="mt-10 p-4 px-5">
       <div className="flex flex-col justify-center items-center gap-5">
         <h1 className="text-5xl font-semibold text-richblack-25">
           Get in Touch
