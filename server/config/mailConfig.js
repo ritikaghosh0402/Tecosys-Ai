@@ -7,6 +7,8 @@ exports.transporter = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
     // port: 587, // or 465 for SSL
     // secure: false,
+    // Encryption: SSL,
+    Port: 535,
     auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,

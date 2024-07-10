@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 require("dotenv").config();
-
-exports.paymentSuccessEmail = (name, amount, orderId, paymentId, receipt) => {
+// const img = require("../public/logo-tecosys.png")
+exports.paymentSuccessEmail = (name, amount, orderId, paymentId) => {
     return `<!DOCTYPE html>
     <html>
     
@@ -71,18 +71,17 @@ exports.paymentSuccessEmail = (name, amount, orderId, paymentId, receipt) => {
     <body>
         <div class="container">
             <a href=${process.env.FRONTEND_URL}>
-            <img class="logo" src="https://i.ibb.co/7Xyj3PC/logo.png"  alt="StudyNotion Logo">
+            <img class="logo" src='../public/logo-tecosys.png' alt="Tecosys Logo">
             </a>
-            <div class="message">Course Payment Confirmation</div>
+            <div class="message">Payment Confirmation</div>
             <div class="body">
                 <p>Dear ${name},</p>
                 <p>We have received a payment of <span class='highlight'>₹${amount}</span></p>.
                 <p>Your Payment ID is <b>${paymentId}</b></p>
                 <p>Your Order ID is <b>${orderId}</b></p>
-                <p>Your Receipt ID is <b>${receipt}</b></p>
             </div>
             <div class="support">If you have any questions or need assistance, please feel free to reach out to us at <a
-                    href="mailto:info@studynotion.com">info@studynotion.com</a>. We are here to help!</div>
+                    href="mailto:info@tecosys.com">info@studynotion.com</a>. We are here to help!</div>
         </div>
     </body>
     

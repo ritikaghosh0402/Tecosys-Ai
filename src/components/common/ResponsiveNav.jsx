@@ -18,7 +18,7 @@ export default function ResponsiveNav({ loading, subLinks }) {
 
 
   return (
-    <div className="md:hidden relative flex gap-5 items-center">
+    <div className="md:hidden relative flex gap-5 items-centere">
     
       <div className="text-richblack-25 text-3xl cursor-pointer   "
         onClick={() => setOpen(!open)}
@@ -30,7 +30,7 @@ export default function ResponsiveNav({ loading, subLinks }) {
       {open && (
         <div
           className={`${open ? "flex flex-col gap-2" : "hidden"
-            } w-[180px] text-richblack-50 absolute z-30 -top-3 -right-3 border border-richblack-600 bg-richblack-800 py-4 rounded-md items-center transition-all ease-in-out duration-200`}
+            } w-[180px] text-richblack-50 absolute z-30 -top-8 -right-5 border border-richblack-600 bg-richblack-800 py-4 rounded-md items-center transition-all ease-in-out duration-200`}
           onClick={(e) => e.stopPropagation()}
           ref={ref}
         >

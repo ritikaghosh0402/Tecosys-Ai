@@ -30,7 +30,7 @@ const cardData = [
 
 function RecievePayments() {
   return (
-    <div className="w-11/12 mx-auto text-white  ">
+    <div className="w-11/12 mx-auto text-white  mt-10">
       {/* section-1 */}
       <div className="flex flex-wrap gap-10 justify-evenly">
         {/* <div className="h-[450px] sm:h-[390px] min-h-fit w-full sm:w-[450px] bg-richblack-800 rounded-lg flex flex-col justify-center px-14 gap-8 sm:gap-10">
