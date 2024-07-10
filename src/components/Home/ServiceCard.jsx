@@ -20,7 +20,7 @@ const EcosystemCard = ({
   return (
     <div
       id="ecosystem-card"
-      className="relative m-2 cursor-pointer ecosystem-card"
+      className="relative m-2 cursor-pointer ecosystem-card hover:scale-105 transition-transform duration-300"
     >
       {!isMobile ? (
         <div className="flex items-center justify-between relative">

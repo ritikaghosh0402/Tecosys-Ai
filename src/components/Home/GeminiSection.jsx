@@ -16,7 +16,7 @@ const GeminiSection = () => {
   const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
   return (
     <div
-      className="h-[400vh]  w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
+      className="h-[400vh]  w-full dark:border dark:border-white/[0.1] rounded-md relative pt-5 md:pt-40 overflow-clip"
       ref={ref}
     >
       <GoogleGeminiEffect

@@ -23,11 +23,11 @@ function HeroSection() {
         <div className="relative">
           <TextGenerateEffect
             words={words}
-            className="w-[80%] mx-auto text-center text-richblack-25 text-6xl leading-tight z-50"
+            className="w-[80%] mx-auto text-center text-richblack-25 text-4xl md:text-6xl leading-tight z-50"
           />
         </div>
 
-        <div className="w-full flex items-center flex-col  content-container ">
+        <div className="w-full flex items-center flex-col content-container ">
           <Lottie
             animationData={animationData}
             loop={true}
@@ -46,7 +46,7 @@ function HeroSection() {
             </a>
             <div>
             <Link to="/invest">
-              <HoverButton text={"Invest Now"} >
+              <HoverButton text={"Invest Now"}  >
               <GiPayMoney />
               </HoverButton>
             </Link>
