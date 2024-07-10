@@ -10,7 +10,7 @@ const CollaboratorSlider = () => {
 
   return (
     <div className="text-richblack-50 w-full flex justify-center px-4">
-      <div className=" my-[50px]h-[170px] w-full  lg:max-w-maxContent flex place-content-center ">
+      <div className=" my-[50px] h-[170px] w-full lg:max-w-maxContent flex place-content-center ">
         <Swiper
           slidesPerView={6}
           breakpoints={{
