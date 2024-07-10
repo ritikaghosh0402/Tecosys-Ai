@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "server": "cd server && npm run dev",
-    "start": "concurrently -n \"client,server\" -c \"bgBlue,bgGreen\" \"npm start\" \"npm run server\""
+    "start": "concurrently -n \"client,server\" -c \"bgBlue,bgGreen\" \"npm dev\" \"npm run server\""
   },
   "dependencies": {
     "@react-three/drei": "^9.108.1",

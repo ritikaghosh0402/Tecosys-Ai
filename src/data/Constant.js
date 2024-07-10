@@ -123,3 +123,26 @@ export const companies = [
         nameImg: "Microsoft Azure",
       },
 ]
+
+export const prod = [
+    {
+        service: "Service 1",
+        amount: 100
+    },
+    {
+        service: "Service 2",
+        amount: 200
+    },
+    {
+        service: "Service 3",
+        amount: 300
+    },
+    {
+        service: "Service 4",
+        amount: 400
+    },
+    {
+        service: "Service 5",
+        amount: 500
+    }
+]

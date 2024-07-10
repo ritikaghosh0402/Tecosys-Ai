@@ -4,30 +4,9 @@ import { useState } from 'react'
 import CountryCode from '../../data/countrycode.json'
 import { pay } from '../../services/payment'
 import { useNavigate } from 'react-router-dom'
-
+import {prod} from '../../data/Constant'
 import "../../App.css"
-const prod = [
-    {
-        service: "Service 1",
-        amount: 100
-    },
-    {
-        service: "Service 2",
-        amount: 200
-    },
-    {
-        service: "Service 3",
-        amount: 300
-    },
-    {
-        service: "Service 4",
-        amount: 400
-    },
-    {
-        service: "Service 5",
-        amount: 500
-    }
-]
+
 
 export default function PaymentForm() {
     const [loading, setLoading] = useState(false);
