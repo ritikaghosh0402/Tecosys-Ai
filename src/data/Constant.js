@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 
 
-import aws from '../../public/collaborators icon/Aws-Partner-Logo.png'
-import equiconsulting from '../../public/collaborators icon/Equiconsulting-services .png'
-import microsoft from '../../public/collaborators icon/msaz.png'
-import google from '../../public/collaborators icon/gcd.png'
-import azure from '../../public/collaborators icon/azr.png'
+import aws from '/collaborators icon/Aws-Partner-Logo.png'
+import equiconsulting from '/collaborators icon/Equiconsulting-services .png'
+import microsoft from '/collaborators icon/msaz.png'
+import google from '/collaborators icon/gcd.png'
+import azure from '/collaborators icon/azr.png'
 
 
 
