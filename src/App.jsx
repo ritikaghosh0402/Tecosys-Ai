@@ -14,18 +14,8 @@ import './App.css'
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
   return (
-    <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter border">
+    <div className="w-[100vw] min-h-screen bg-richblack-900 flex flex-col font-inter border">
       <Navbar />
-      {/* <ParticlesComponent id="particles"  />
-        <SparklesCore
-          id="tsparticlesfullpage"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/invest" element={<RecievePayments />} />

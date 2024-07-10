@@ -5,12 +5,12 @@ import Lottie from "lottie-react";
 
 function ContactUs() {
   return (
-    <div className="p-4">
+    <div className="mt-10 p-4 px-5">
       <div className="flex flex-col justify-center items-center gap-5">
-        <h1 className="text-3xl md:text-5xl font-semibold text-richblack-25">
+        <h1 className="text-5xl font-semibold text-richblack-25">
           Get in Touch
         </h1>
-        <p className="text-sm md:text-lg text-center w-[80%] md:w-full">
+        <p className="text-lg md:text-lg text-center w-[80%] md:w-full">
           We&apos;d love to here for you, Please fill out this form.
         </p>
       </div>

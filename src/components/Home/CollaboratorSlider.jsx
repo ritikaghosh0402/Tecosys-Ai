@@ -10,7 +10,7 @@ const CollaboratorSlider = () => {
 
   return (
     <div className="text-richblack-50 w-full flex justify-center px-4">
-      <div className=" my-[50px] h-[170px] w-full lg:max-w-maxContent flex place-content-center ">
+      <div className=" sm:my-[50px] sm::h-[170px] w-full lg:max-w-maxContent flex place-content-center ">
         <Swiper
           slidesPerView={6}
           breakpoints={{
@@ -43,7 +43,7 @@ const CollaboratorSlider = () => {
           {companies.map((colaborator, i) => (
             <SwiperSlide key={i} className="rounded-lg flex place-content-center border bg-[#6235a0] shadow-lg shadow-[#b99ce0]">
               <div className="flex flex-col items-center gap-3 p-3 text-[14px] text-richblack-25">
-                <div className="w-full h-16 md:h-36  aspect-square shadow-2xl shadow-[#a36cef] rounded-xl">
+                <div className="w-full h-28 md:h-36  aspect-square shadow-2xl shadow-[#a36cef] rounded-xl">
                   <img
                     src={colaborator.img}
                     alt="img"

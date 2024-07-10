@@ -23,7 +23,7 @@ function HeroSection() {
         <div className="relative">
           <TextGenerateEffect
             words={words}
-            className="w-[80%] mx-auto text-center text-richblack-25 text-4xl md:text-6xl leading-tight z-50"
+            className="w-full sm:w-[80%] mx-auto text-center text-richblack-25 text-4xl md:text-6xl leading-tight z-50"
           />
         </div>
 
@@ -31,7 +31,7 @@ function HeroSection() {
           <Lottie
             animationData={animationData}
             loop={true}
-            className="h-[61vh] w-full"
+            className="md:h-[61vh] w-full"
           />
 
           <div className="relative z-10 flex gap-10 items-center">

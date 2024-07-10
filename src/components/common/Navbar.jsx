@@ -14,7 +14,7 @@ function Navbar() {
     const matchRoute = (route) => matchPath({ path: route }, location.pathname);
     return (
         <div className='w-full flex place-content-center '>
-            < div className='w-full sm:w-11/12 md:w-10/12 flex justify-between items-center py-2 md:px-10 sm:px-10  px-5 '>
+            < div className='w-full sm:w-11/12 md:w-10/12 flex justify-between items-center py-2 md:px-10 sm:px-10 px-5  relative'>
                 <div>
                     <Link to='https://www.tecosys.in/' target='_blank'>
                         <img src={logo} alt="logo" width={55} className='rounded-full' />
@@ -23,7 +23,7 @@ function Navbar() {
                 <nav className='text-lg hidden md:block'>
                     <ul className={`flex  gap-4 md:gap-5 text-richblack-25 `}>
                         {NavbarLinks.map((link, index) => (
-                            
+
                             <li key={index}>
                                 <Link
                                     to={link?.url}
@@ -35,14 +35,16 @@ function Navbar() {
                                         `}
                                 >
                                     {/* <div className='h-full  hover:border transition-all  px-2'> */}
-                                        {link.title}
+                                    {link.title}
                                     {/* </div> */}
                                 </Link>
                             </li>
                         ))}
                     </ul>
                 </nav>
-                <ResponsiveNav loading={loading} subLinks={subLinks}/>
+                
+                    <ResponsiveNav loading={loading} subLinks={subLinks} />
+            
             </div>
         </div>
     )

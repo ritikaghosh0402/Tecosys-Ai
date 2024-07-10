@@ -107,4 +107,3 @@ exports.verifyPayment = async (req, res) => {
         .json({ success: false, message: "couldn,t send the mail" });
     }
   };
-  
