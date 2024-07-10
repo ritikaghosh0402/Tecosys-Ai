@@ -79,7 +79,7 @@ exports.contactUsEmail = (
   <body>
       <div class="container">
           <a href=${process.env.FRONTEND_URL}>
-          <img class="logo" src="https://drive.google.com/file/d/199RL9O_Z3stK4bozN5JEsejZHbeL6QRA/view?usp=sharing" alt="StudyNotion Logo"></a>
+          <img class="logo" src="https://drive.google.com/file/d/199RL9O_Z3stK4bozN5JEsejZHbeL6QRA/view?usp=sharing" alt="Tecosys Logo"></a>
           <div class="message">Contact Form Confirmation</div>
           <div class="body">
               <p>Dear ${firstname} ${lastname},</p>

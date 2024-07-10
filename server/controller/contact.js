@@ -10,7 +10,7 @@ exports.contactUs = async (req, res) => {
 
     await mailSender(
       email,
-      "Your Data send successfully",
+      "Message send successfully",
       contactUsEmail(email, firstName, lastName, message, phoneNo, countrycode)
     )
     await mailSender(

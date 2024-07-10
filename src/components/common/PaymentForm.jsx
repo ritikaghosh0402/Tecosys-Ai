@@ -235,7 +235,7 @@ export default function PaymentForm() {
                     </label>
                 </div>
 
-                <button type="submit" className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px]  font-semibold text-lg text-richblack-900"
+                <button type="submit" className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px]  font-semibold text-lg text-richblack-900 hover:scale-95 transition-all duration-300 ease-in-out"
                     disabled={loading}>
                     Pay Now
                 </button>
