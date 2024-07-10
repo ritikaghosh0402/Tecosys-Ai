@@ -1,46 +1,26 @@
-const express = require('express');
-const cors = require('cors');
-const stripe = require('stripe')('sk_test_51H')
-const { v4: uuid } = require('uuid');
+/* eslint-disable no-undef */
+
+const express = require('express')
+const cors = require("cors")
+const paymentsRoutes = require("./routes/payments")
+const contact = require('./routes/contact')
+require('dotenv').config();
+
+const port = process.env.PORT || 8080;
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+    cors({
+        origin: process.env.FRONTEND_URL,
+		credentials: true,
+    })
+)
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send('Welcome to the world of AI with Tecosys!')
 });
 
-app.post("/payment", (req, res)=>{
-    const {product, token} = req.body;
-    console.log("PRODUCT", product);
-    console.log("PRICE", product.price);
-    const idempotencyKey = uuid();
+app.use("/", paymentsRoutes)
+app.use('/', contact)
 
-    return stripe.customers.create({
-        email: token.email,
-        source: token.id
-    }).then(customer => {
-        stripe.charges.create({
-            amount: product.price * 100,
-            currency: 'INR',
-            customer: customer.id,
-            receipt_email: token.email,
-            description: `Purchase of ${product.name}`,
-            shipping: {
-                name: token.card.name,
-                address: {
-                    line1: token.card.address_line1,
-                    line2: token.card.address_line2,
-                    city: token.card.address_city,
-                    country: token.card.address_country,
-                    postal_code: token.card.address_zip
-                }
-            }
-        }, {idempotencyKey})
-    }).then(result => res.status(200).json(result))
-    .catch(err => console.log(err));
-})
-
-
-
-app.listen(8080, () => console.log('Server is running on port 8080'));
+app.listen(port, () => console.log('Server is running on port 8080'))

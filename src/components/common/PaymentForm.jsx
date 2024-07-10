@@ -1,14 +1,11 @@
 import { useEffect } from 'react'
-import { useForm } from 'react-hook-form';
-import { useState } from 'react';
+import { useForm } from 'react-hook-form'
+import { useState } from 'react'
 import CountryCode from '../../data/countrycode.json'
-import StripeCheckout from 'react-stripe-checkout';
+import { pay } from '../../services/payment'
+import { useNavigate } from 'react-router-dom'
 
-// import { apiConnector } from '../../services/apiConnector';
-// import { contactusEndpoint } from '../../services/apis';
-// import { toast } from 'react-hot-toast';
-
-import "../../App.css";
+import "../../App.css"
 const prod = [
     {
         service: "Service 1",
@@ -34,25 +31,8 @@ const prod = [
 
 export default function PaymentForm() {
     const [loading, setLoading] = useState(false);
-    // const makePayment = (token) => {
-    //     const body = {
-    //         token,
-    //         service
-    //     }
+    const navigate = useNavigate()
 
-    //     const headers = {
-    //         "Content-Type": "application/json"
-    //     }
-    //     return fetch(`http://localhost:8080/payment`, {
-    //         method: 'POST',
-    //         headers,
-    //         body: JSON.stringify(body)
-    //     }).then(response => {
-    //         console.log(response)
-    //         const { status } = response
-    //         console.log('Status', status)
-    //     }).catch(error => console.log(error))
-    // }
     const {
         register,
         handleSubmit,
@@ -60,25 +40,22 @@ export default function PaymentForm() {
         formState: { errors, isSubmitSuccessful }
     } = useForm();
     const [service, setService] = useState([prod[0].service, prod[0].amount])
-    console.log(service)
+
     const submitContactForm = async (data, e) => {
-        // const toastId = toast.loading("Loading ...")
         try {
             setLoading(true);
             e.preventDefault()
-            // const res = await apiConnector(
-            //     "POST",
-            //     contactusEndpoint.CONTACT_US_API,
-            //     data
-            //   )
-            //   console.log(res)
-            console.log(data)
+
+            const serve = data.service.split(',')[0]
+            data = { ...data, service: serve }
+
+            await pay(data, navigate)
             setLoading(false);
+
         } catch (error) {
             console.log("Error: ", error);
             setLoading(false);
         }
-        // toast.dismiss(toastId)
     }
     useEffect(() => {
         if (isSubmitSuccessful) {
@@ -260,14 +237,14 @@ export default function PaymentForm() {
                 </div>
 
                 <div className='flex flex-col relative'>
-                    <label htmlFor="message" className='mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5'>Message<span className='text-pink-300'>*</span>
+                    <label htmlFor="message" className='mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5'>Message
                         <textarea
                             name="message"
                             id="message"
                             cols="30"
                             rows="5"
                             placeholder='Enter your message here'
-                            {...register("message", 
+                            {...register("message",
                                 // { required: true }
                             )}
                             style={{
@@ -283,19 +260,6 @@ export default function PaymentForm() {
                     disabled={loading}>
                     Pay Now
                 </button>
-                {/*
-                <StripeCheckout
-                    stripeKey='key'
-                    token={makePayment}
-                    amount={service[1] * 100}
-                    name={service[0]}
-                    currency='INR'
-                >
-                    <button className=''>
-                        Pay with Stripe
-                    </button>
-                </StripeCheckout>
-                */}
 
             </div>
         </form>

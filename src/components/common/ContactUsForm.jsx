@@ -1,10 +1,12 @@
+/* eslint-disable no-unused-vars */
 import { useEffect } from 'react'
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import CountryCode from '../../data/countrycode.json';
-// import { apiConnector } from '../../services/apiConnector';
-// import { contactusEndpoint } from '../../services/apis';
+import { apiConnector } from '../../services/apiConnector';
 import { toast } from 'react-hot-toast';
+
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
 
 export default function ContactUsForm() {
     const [loading, setLoading] = useState(false);
@@ -19,15 +21,16 @@ export default function ContactUsForm() {
         try {
             setLoading(true);
             e.preventDefault()
-            // const res = await apiConnector(
-            //     "POST",
-            //     contactusEndpoint.CONTACT_US_API,
-            //     data
-            //   )
-            //   console.log(res)
+            const res = await apiConnector(
+                "POST",
+                `${BACKEND_URL}/contactUs`,
+                data
+              )
             setLoading(false);
+            toast.success("Data send successfully")
         } catch (error) {
             console.log("Error: ", error);
+            toast.error("Something went wrong...")
             setLoading(false);
         }
         toast.dismiss(toastId)
@@ -35,8 +38,8 @@ export default function ContactUsForm() {
     useEffect(() => {
         if (isSubmitSuccessful) {
             reset({
-                firstname: "",
-                lastname: "",
+                firstName: "",
+                lastName: "",
                 email: "",
                 phoneNo: "",
                 message: "",
@@ -62,7 +65,7 @@ export default function ContactUsForm() {
                             }}
                             className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
                         />
-                        {errors.firstname && (<span className='sm:absolute -bottom-6 left-0 text-pink-300'>Please enter your first name</span>)}
+                        {errors.firstName && (<span className='sm:absolute -bottom-6 left-0 text-pink-300'>Please enter your first name</span>)}
                         </label>
                     </div>
 
@@ -79,7 +82,7 @@ export default function ContactUsForm() {
                             }}
                             className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
                         />
-                        {errors.lastname && (<span className='sm:absolute -bottom-6 left-0 text-pink-300'>Please enter your last name</span>)}
+                        {errors.lastName && (<span className='sm:absolute -bottom-6 left-0 text-pink-300'>Please enter your last name</span>)}
                         </label>
                     </div>
                 </div>
