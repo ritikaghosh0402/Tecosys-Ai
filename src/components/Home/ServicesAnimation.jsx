@@ -126,7 +126,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={0}
-                    imgsrc={lawyer}
+                    imgsrc={chatbot}
                     hoveredTxt={centerText[0].text}
                   />
                 </div>
@@ -238,7 +238,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={7}
-                    imgsrc={chatbot}
+                    imgsrc={lawyer}
                     hoveredTxt={centerText[7].text}
                   />
                 </div>
@@ -301,7 +301,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={0}
-                    imgsrc={lawyer}
+                    imgsrc={chatbot}
                     hoveredTxt={centerText[0].text}
                   />
                 </div>
@@ -413,7 +413,7 @@ const ServicesAnimation = () => {
                     rotation={rotation}
                     setHoveredTxt={setHoveredTxt}
                     index={7}
-                    imgsrc={chatbot}
+                    imgsrc={lawyer}
                     hoveredTxt={centerText[7].text}
                   />
                 </div>
